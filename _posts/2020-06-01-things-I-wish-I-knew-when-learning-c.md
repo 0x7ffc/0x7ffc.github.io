@@ -310,3 +310,33 @@ ARRAY_PUSH(c, 1);
 printf("%d\n", c[0]);  // print 1;
 ARRAY_FREE(c);
 ```
+
+---
+
+## X macros
+
+Sometimes you need to manage parallel list of data, for example in the above example with the interpreter, you have a list of bytecodes, and a jump table list(for computed goto), instead of hand written the jump table, X macros can generate them for you.
+
+```c
+// "opcode.h"
+// this is the header file for all the bytecodes.
+OPCODE(add)
+OPCODE(subtract)
+// ...
+```
+
+```c
+int *ip;
+static void *dispatch_table[] = {
+  #define OPCODE(name) &&op_##name,
+  #include "opcode.h"
+  #undef OPCODE
+};
+void interpret() {
+  goto *dispatch_table[*ip++];
+op_add:
+  // ...
+op_subtract:
+  //...
+}
+```
