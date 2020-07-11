@@ -3,7 +3,7 @@ title_left    : "Chen's blog"
 title_right   : "" # default: ""
 description   : ""
 keywords      : "blog, programming, lisp, compiler"
-url           : https://0x7ffc.github.io/ # site url
+url           : https://0x7ffc.github.io # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
