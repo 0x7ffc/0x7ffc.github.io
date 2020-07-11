@@ -4,6 +4,7 @@ group :jekyll_plugins do
     gem "bourbon"
     gem "jekyll-paginate"
 end
+gem 'kramdown'
 gem 'html-proofer'
 gem 'tzinfo'
 gem 'tzinfo-data'

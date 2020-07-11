@@ -16,6 +16,7 @@ postshare_enabled : false
 # Build settings
 permalink   : /:year/:title/
 markdown    : kramdown
+mathjax:    true
 highlighter : rouge
 
 source      : ./
