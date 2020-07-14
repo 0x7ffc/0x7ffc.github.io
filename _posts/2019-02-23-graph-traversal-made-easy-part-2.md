@@ -49,7 +49,7 @@ def dfs_have_cycle?(adj, v, parent, processing=Hash.new(false))
     return true if processing[x] # new line
     if !parent.has_key?(x)
       parent[x] = v
-      return true if dfs(adj, x, parent) # slight change
+      return true if dfs_have_cycle?(adj, x, parent, processing) # slight change
     end
   end
   processing[v] = false		       # new line
