@@ -3,6 +3,7 @@ layout: post
 title: "Fun with Fibonacci"
 description: ""
 keywords: "haskell"
+mathjax: true
 ---
 
 Fibonacci，想试试用Haskell写，没想到[有很多](https://wiki.haskell.org/The_Fibonacci_sequence)有很多有意思的东西。一步一步来，首先是定义：
@@ -14,7 +15,7 @@ Fibonacci，想试试用Haskell写，没想到[有很多](https://wiki.haskell.o
 ```haskell
 fibs 0 = 0
 fibs 1 = 1
-fibs n = fib (n\-1) + fib (n\-2)
+fibs n = fib (n-1) + fib (n-2)
 ```
 
 想象一下展开的树，自顶向下有很多重复的分支，我试了一下，算`fibs 40`都有明显的迟钝了。空间复杂度为$\Theta(n)$，时间复杂度为$\Theta(\phi^n)$，其中$\phi = \frac{\sqrt{5}+1}{2}$，呈指数型增长。

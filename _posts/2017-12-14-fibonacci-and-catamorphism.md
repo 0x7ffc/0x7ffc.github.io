@@ -3,9 +3,8 @@ layout: post
 title: "Fibonacci and Catamorphism"
 description: ""
 keywords: "haskell"
+mathjax: true
 ---
-
-$\require{AMScd}$
 
 没想到吧，Fibonacci还能编出Part2。实际上这个Part2跟Fibonacci没啥大关系，千错万错我不该去看什么Category Theroy，又费解又没用，现在满脑子都是Recursion Scheme，我真是闲。
 
@@ -152,6 +151,7 @@ newtype Fix f = Fix { unFix :: f (Fix f) }
 
 在实现cata之前，先看下面这个东西：
 
+$\require{AMScd}$
 
 $$
 \begin{CD}

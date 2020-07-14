@@ -112,4 +112,4 @@ As you can see, WSL's ip address is no longer `127.0.0.1`. You need to change al
 
 #### Update 8:
 
-I wrote my own emacs configuration now, I'll discuss about it more in later article.
+I wrote my own emacs configuration now, I'll talk about it more in later article.
