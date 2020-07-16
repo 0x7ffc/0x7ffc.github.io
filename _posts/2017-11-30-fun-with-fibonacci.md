@@ -119,11 +119,40 @@ Stackoverflow上有两个答案解释的比较清楚：
 
 ### Faster!!
 
-\\\[ \\begin{align\*} F(n+1) &= 1\\,F(n) + 1\\,F(n-1)\\\\ F(n) &= 1\\,F(n) + 0\\,F(n-1)\\\\ \\\\ \\begin{bmatrix} F(n+1) \\\\ F(n) \\end{bmatrix} &= \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix} \\begin{bmatrix} F(n) \\\\ F(n - 1) \\end{bmatrix} \\\\ \\begin{bmatrix} F(n+1) \\\\ F(n) \\end{bmatrix} &= \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^n \\begin{bmatrix} F(1) \\\\ F(0) \\end{bmatrix} \\\\ \\\\ \\text{并且} \\\\ \\begin{bmatrix} F(n) \\\\ F(n-1) \\end{bmatrix} &= \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^n \\begin{bmatrix} F(0) \\\\ F(-1) \\end{bmatrix} \\\\ \\\\ \\text{于是得到}\\\\ \\begin{bmatrix} F(n+1) & F(n) \\\\ F(n) & F(n-1) \\end{bmatrix} &= \\begin{bmatrix} 1 & 1 \\\\ 1 & 0 \\end{bmatrix}^n \\begin{bmatrix} F(1) & F(0) \\\\ F(0) & F(-1) \\end{bmatrix} \\\\ \\\\ \\text{其中} \\\\ F(1) &= 1 \\\\ F(0) &= 0 \\\\ F(-1) &= 1 \\end{align\*} \\\]
+$$
+\begin{align*}
+F(n+1) &= 1\,F(n) + 1\,F(n-1)\\
+F(n) &= 1\,F(n) + 0\,F(n-1)\\
+\\
+\begin{bmatrix} F(n+1) \\ F(n) \end{bmatrix} &= \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix} \begin{bmatrix} F(n) \\ F(n - 1) \end{bmatrix} \\
+\begin{bmatrix} F(n+1) \\ F(n) \end{bmatrix} &= \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} F(1) \\ F(0) \end{bmatrix} \\
+\\
+\text{并且} \\
+\begin{bmatrix} F(n) \\ F(n-1) \end{bmatrix} &= \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} F(0) \\ F(-1) \end{bmatrix} \\
+\\
+\text{于是得到}\\
+\begin{bmatrix} F(n+1) & F(n) \\ F(n) & F(n-1) \end{bmatrix} &= \begin{bmatrix} 1 & 1 \\ 1 & 0 \end{bmatrix}^n \begin{bmatrix} F(1) & F(0) \\ F(0) & F(-1) \end{bmatrix} \\
+\\
+\text{其中} \\
+F(1) &= 1 \\
+F(0) &= 0 \\
+F(-1) &= 1
+\end{align*}
+$$
 
 右边的矩阵是个单位矩阵，于是就得出结论啦：
 
-\\\[ \\begin{pmatrix} 1 & 1\\\\ 1 & 0 \\end{pmatrix}^n = \\begin{pmatrix} F\_{n+1} & F\_n\\\\ F\_{n} & F\_{n-1} \\end{pmatrix} \\\]
+$$
+\begin{pmatrix}
+1 & 1\\
+1 & 0
+\end{pmatrix}^n
+=
+\begin{pmatrix}
+F_{n+1} & F_n\\
+F_{n} & F_{n-1}
+\end{pmatrix}
+$$
 
 于是算第n个Fibonacci数的问题就简化成了求矩阵n次方的问题，注意这里要用矩阵快速幂算法才能达到\\(\\Theta(logN)\\)（可参考TAOCP卷二4.63节），不然就会退化成动态规划。
 

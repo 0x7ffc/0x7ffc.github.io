@@ -126,6 +126,6 @@ It may worries you that in this problem it takes some effort to build the graph,
 g = prerequisites.reduce(Array.new(num_courses) {[]}) { |h, (u, v)| h[v] << u; h}
 ```
 
-That pretty sums up DFS, maybe I'll talk about DFS on trees later.
+That pretty sums up DFS, we talked about cycle detection and topological sort. Maybe I'll talk about DFS on trees later.
 
 We'll look at BFS and solve some shortest path problems next.

@@ -58,7 +58,7 @@ Just bunch of `use-package` forms.
 
 That being said, there are some minor issues:
 
-- `use-package` doesn\'t offer a convenient why to write code dependent on multiple packages, here is an [issue](https://github.com/jwiegley/use-package/issues/315) that describes it. `Spacemacs` solves it by create it\'s own [layer loading mechanism](https://github.com/syl20bnr/spacemacs/blob/develop/doc/LAYERS.org). but it\'s excessive as long as you aren\'t writing that much code. You can just use our old friend `with-eval-after-load`. Or don\'t use anything, just make sure your packages are load in order.
+- `use-package` doesn\'t offer a convenient why to write code dependent on multiple packages, here is an [issue](https://github.com/jwiegley/use-package/issues/315) that describes it. `Spacemacs` solves it by create it\'s own [layer loading mechanism](https://github.com/syl20bnr/spacemacs/blob/develop/doc/LAYERS.org). but it\'s excessive as long as you aren\'t writing that much code. You can just use our old friend `with-eval-after-load`. Or don\'t use anything, just make sure your packages are loaded in order.
 - Need quite some time to figure out how to glue these five packages together. I haven\'t found one single `.emacs.d` on github that uses all five package, let alone one with **DVORAK** keybindings support (I can\'t type on QWERTY).
 - Need to RTFM. Like, a LOT. And some of them are confusing, like buffers and windows.
 
