@@ -117,4 +117,4 @@ def solve(begin_word, end_word, word_list)
 end
 ```
 
-We talked about BFS, Bi-Directional BFS and solved some shortest path problems. Next I'll look into more complicated concepts like Dijkstra and Bellman-Ford.
+We talked about BFS, Bi-Directional BFS and solved some shortest path problems. Next We'll look into more complicated concepts like Dijkstra and Bellman-Ford.
