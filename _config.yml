@@ -23,7 +23,7 @@ destination : ./_site
 
 # Sass configuration
 sass:
-  sass_dir  : assets/scss
+  sass_dir  : _scss
   style     : compressed # expanded
 
 # Author settings
@@ -33,7 +33,6 @@ author:
 plugins:
   - jekyll-sitemap
   - bourbon
-  - jekyll-paginate
 
 # navbar pages
 navbar:
