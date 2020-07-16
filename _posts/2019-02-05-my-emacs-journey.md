@@ -14,7 +14,7 @@ There are some problems while I'm using spacemacs.
 - I want all my key bindings to accommodate Dvorak layout.
 - Spacemacs and most other configs are too "heavy" for me.
 
-These problems are getting bigger and my Spacemacs config are getting messier. So I decided to write my own `.emacs.d`. After writing some code I really feel like that everyone should write their own Emacs configuration, here is why:
+These problems are getting bigger and my Spacemacs config are getting messier. So I decided to write [my own `.emacs.d`](https://github.com/0x7ffc/lain-emacs). After writing some code I really feel like that everyone should write their own Emacs configuration, here is why:
 
 - Different people emphasize on different stacks, you don\'t need EVERYTHING.
 - Some prefer **emacs** key bindings while others prefer **vim** key bindings.
