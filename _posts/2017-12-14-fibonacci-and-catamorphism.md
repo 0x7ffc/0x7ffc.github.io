@@ -151,7 +151,7 @@ newtype Fix f = Fix { unFix :: f (Fix f) }
 
 在实现cata之前，先看下面这个东西：
 
-$\require{AMScd}$
+$$\require{amsCd}$$
 
 $$
 \begin{CD}
