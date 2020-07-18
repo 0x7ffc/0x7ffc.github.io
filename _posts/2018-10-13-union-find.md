@@ -56,7 +56,7 @@ def solve(board)
   dummy_node = w*h		# use the last unused index as the dummy node
   region = []			# all the 'O's indices are stored here
   (0..(w*h-1)).each do |i|
-    if board[i/w][i%w] == 'O'
+    if board[i / w][i % w] == 'O'
       region << i
       neighbors = []
       neighbors << i+1 unless ((i+1) % w).zero?       # right
@@ -65,12 +65,12 @@ def solve(board)
       neighbors << i+w unless i >= w*(h-1) && i < w*h # down
       uf.union(i, dummy_node) unless neighbors.length == 4
       neighbors.each do |n|
-	uf.union(n, i) if board[n/w][n%w] == 'O'
+	uf.union(n, i) if board[n / w][n % w] == 'O'
       end
     end
   end
   region.each do |i|
-    board[i/w][i%w] = 'X' unless uf.connected?(i, dummy_node)
+    board[i / w][i % w] = 'X' unless uf.connected?(i, dummy_node)
   end
 end
 ```

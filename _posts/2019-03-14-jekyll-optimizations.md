@@ -92,7 +92,7 @@ If you want to speed up things a little further, you can host Mathjax fonts loca
 
 First, move your `main.scss` file to `_includes/main.scss`, now you'll can use `{{ "{% include main.scss " }}%}` in your template. Also remove the front matter inside `main.scss` since you don't need Jekyll to process it anymore. You can still use `@import` to import files inside `_scss`. In the end, add these to your `head.html`:
 
-```
+```xml
 {{ "{% capture styles " }}%}
 {{ "{% include main.scss " }}%}
 {{ "{% endcapture " }}%}
