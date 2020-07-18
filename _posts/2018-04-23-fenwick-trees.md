@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Fenwick Trees"
-description: ""
-keywords: "algorithm"
+description: "Fenwick Tree (Binary Indexed Tree) is a common data structure used to solve range sum problem. Here I provide some intuition and solves some leetcode problems with it."
 ---
 
 Given some sequence and you want to determine range sum queries, for example:

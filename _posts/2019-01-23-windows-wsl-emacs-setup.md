@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Windows 10 WSL Emacs Setup"
-description: ""
-keywords: "tools"
+description: "A guide to setup WSL2, Emacs, X410 on Windows."
 ---
 
 ***You may want to scroll down and see all the updates***

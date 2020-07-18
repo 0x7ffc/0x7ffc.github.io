@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Graph Traversal Made Easy - Part 2"
-description: ""
-keywords: "algorithm"
+description: "Part 2 of a comprehansive guide to Graph Traverasal algorithms which includes Depth First Search and solves some leetcode problems with it."
 ---
 
 Now you have an overview of DFS, I want to generize DFS a little bit. Firstly, the way the graph is specified is as an adjacency lists:

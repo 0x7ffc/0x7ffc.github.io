@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Binary Search"
-description: ""
-keywords: "algorithm"
+description: "Binary search although easy to describe, but hard to write it bug free. Here I'll explore the idea of Discrete Binary Search and solve some leetcode problems with it."
 ---
 
 When I was learning binary search and saw other people's implementation, I was confused, I'm sure you did as well. Let's clear it up. Binary search in the first glance is used to find a value in a sorted sequence, you may write something like this:

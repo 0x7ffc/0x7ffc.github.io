@@ -1,19 +1,10 @@
-# Site settings
-title_left    : "Chen's blog"
-title_right   : "" # default: ""
-description   : ""
-keywords      : "blog, programming, lisp, compiler"
+title         : "Chen's blog"
+description   : "Blog Abount Programming"
+keywords      : "blog, programming, compiler, algorithm"
 url           : https://0x7ffc.github.io # site url
-baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+baseurl       : ""
 cover         : "" # image uri like logo/cover image for site seo
 
-google_analytics  : UA-XXXXX-XX
-twitter_username  : ""
-comments_enabled  : false # if enabled (set to true), please provide your disqus_username
-disqus_shortname  : ""
-postshare_enabled : false
-
-# Build settings
 permalink   : /:year/:title/
 markdown    : kramdown
 highlighter : rouge
@@ -21,16 +12,22 @@ highlighter : rouge
 source      : ./
 destination : ./_site
 
-# Sass configuration
 sass:
   sass_dir  : _scss
   style     : compressed # expanded
 
-# Author settings
 author:
   name     : "Chen"
 
+social:
+  name: Chen
+  links:
+    - https://github.com/0x7ffc
+
+google_site_verification: LrbQGpNpmw_icgvGLPdKTu5LasO_u7Bu3w2s0xoHrlQ
+
 plugins:
+  - jekyll-seo-tag
   - jekyll-sitemap
   - bourbon
 

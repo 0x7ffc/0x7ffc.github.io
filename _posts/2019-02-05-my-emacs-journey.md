@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "My Emacs Journey"
-description: ""
-keywords: "emacs"
+description: "A journey of me writing .emacs.d . I use Dvorak keyboard layout and evil-mode which makes my experince challenging and interesting."
 ---
 
 There are some problems while I'm using spacemacs.

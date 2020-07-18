@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Graph Traversal Made Easy - Part 1"
-description: ""
-keywords: "algorithm"
+description: "Part 1 of a comprehansive guide to Graph Traverasal algorithms which includes Depth First Search and solves some leetcode problems with it."
 ---
 
 [Last time](https://0x7ffc.github.io/2018/union-findast) we solved some graph problems using Union-Find, I mentioned that it can also be solved using graph traversal algorithms like DFS. In this series of article we'll explore the idea of simple graph traversal algoritms like DFS and BFS, and try to solve more interesting problems. In case you didn't know the basics of DFS go watch [this](https://www.coursera.org/lecture/algorithms-part2/depth-first-search-mW9aG).

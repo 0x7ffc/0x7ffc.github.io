@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Intro to Dynamic Programming"
-description: ""
-keywords: "algorithm"
+description: "Dynacmic Programming although easy to describe: it's just recursion + memoization, but it's hard to fully grasp. Here I'll explore these ideas step by step providing a comprehensive guide and solve some leetcode problems with it."
 ---
 
 I was really confused when I was first introduced to the concept of dynamac progrmming, partly because I wasn't good at understanding recursion and mostly because people who tought me did a bad job. They didn't tell me about recusion and memoization, all they told me was "states" and "state transformation formulas", so at that time DP felt like a gimmick to me. Now I've clear this all up and I want to share it with you.

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Things I Wish I Knew About Bitwise Operators"
-description: ""
-keywords: "bitwise"
+description: "Lowest one bit and other common bitwise hacks are interesting yet difficult to understand. This article provides some explanation and motivation behind some hacks."
 ---
 
 First you need to see [this](https://graphics.stanford.edu/~seander/bithacks.html) amazing article. If you haven't, I don't know what to say, it's your loss.

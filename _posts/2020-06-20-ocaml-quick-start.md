@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "OCaml Quickstart"
-description: ""
-keywords: "ocaml"
+description: "A quickstart guide for you to get started with OCaml."
 ---
 
 ## Project setup

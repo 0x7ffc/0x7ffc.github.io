@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "The Problem With Recommender System"
-description: ""
-keywords: ""
+description: "Currently Recommerder System doesn't provides use with freedom at all. Here I'll explain the reason behind it and why we should ask for more freedom."
 ---
 
 [Recommender system](https://en.wikipedia.org/wiki/Recommender_system) is a system designed to provide user with more 'relative' connent. Simply put, the more content you see, the more similar content you're going to get. In most cases, this type of behivior is what the user want. For example, if I like rock music, I certainly want to hear more rock music. And for companies like Amazon, they can generate more revenue if the user tend to buy more of the same category of product. However, it also can be wrongly used.

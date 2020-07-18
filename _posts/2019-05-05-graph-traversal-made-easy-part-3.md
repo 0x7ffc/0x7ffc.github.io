@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Graph Traversal Made Easy - Part 3"
-description: ""
-keywords: "algorithm"
+description: "Part 3 of a comprehansive guide to Graph Traverasal algorithms which includes (Bi-Directional) Breadth First Search and solves some leetcode problems with it."
 ---
 
 DFS is often used to explore the whole graph. BFS on the other hand explore the graph layer by layer and that'll help us finding the shortest paths. It also can tells us which vertices are unreadchable from s, in that case the shortes path is infinity.

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Jekyll Optimizations"
-description: ""
-keywords: "tools"
+description: "Some easy Jekyll optimizations such as local fants, mathjax 3 and CSS inlining which make your site loads faster."
 mathjax: true
 ---
 

@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Things I Wish I Knew When Learning C"
-description: ""
-keywords: "c"
+description: "Some interesting aspects of C that I wich I knew, such as The Clockwise/Spiral rule, Structure padding, Anonymous struct / union, X Macros and many others."
 ---
 
 ## The Clockwise/Spiral rule
