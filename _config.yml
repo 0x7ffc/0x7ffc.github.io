@@ -23,7 +23,10 @@ social:
   links:
     - https://github.com/0x7ffc
 
-google_site_verification: LrbQGpNpmw_icgvGLPdKTu5LasO_u7Bu3w2s0xoHrlQ
+webmaster_verifications:
+  google: LrbQGpNpmw_icgvGLPdKTu5LasO_u7Bu3w2s0xoHrlQ
+  bing: 5983F4DF7578DCA8D2431DFD9F3C742F
+  baidu: TDbxJgoIdP
 
 plugins:
   - jekyll-seo-tag
