@@ -125,7 +125,9 @@ $$
 
 注意上面的第一个规则是怎么利用E的定义巧妙的实现和CBV一样的求值顺序的。理解了CBV，那实现CBN也很简单了：
 
-\\\[ E ::= \[\\cdot\]\\;|\\;E\\;e \\qquad \\frac{e\\to e'}{E\[e\]\\to E\[e'\]} \\qquad {\\bf{\\beta}\\scriptsize{-REDUCTION}} \\frac{}{(\\lambda x.e\_1)e\_2\\to e\_1\\{e\_2/x\\}} \\\]
+$$
+E ::= [\cdot]\;|\;E\;e \qquad \frac{e\to e'}{E[e]\to E[e']} \qquad {\bf{\beta}\scriptsize{-REDUCTION}} \frac{}{(\lambda x.e_1)e_2\to e_1\{e_2/x\}}
+$$
 
 求值上下文的好处远远不止这些，下面会构造一些更复杂的语言结构。
 
