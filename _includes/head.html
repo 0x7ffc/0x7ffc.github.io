@@ -22,12 +22,14 @@
 		return x.substring(11,x.length-4);
 	    return x;
 	}
-	document.querySelectorAll("script[type='math/tex']").forEach(function(el){
-	    el.outerHTML = "\\(" + stripcdata(el.textContent) + "\\)";
-	});
-	document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el){
-	    el.outerHTML = "\\[" + stripcdata(el.textContent) + "\\]";
-	});
+	for (node of document.querySelectorAll('script[type^="math/tex"]')) {
+	    const inline = !node.type.match(/; *mode=display/);
+	    if (inline) {
+		node.outerHTML = "\\(" + stripcdata(el.textContent) + "\\)";
+	    } else {
+		el.outerHTML = "\\[" + stripcdata(el.textContent) + "\\]";
+	    }
+	}
 	var script = document.createElement('script');
 	script.async = true;
 	script.id = "MathJax-script";
