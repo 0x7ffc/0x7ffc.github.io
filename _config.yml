@@ -1,6 +1,5 @@
 title         : "Chen's blog"
-description   : "Blog Abount Programming"
-keywords      : "blog, programming, compiler, algorithm"
+description   : "Chen0x7ffc's blog, mostly about programming languages, algorithms, functional programming, compilers."
 url           : https://0x7ffc.github.io # site url
 baseurl       : ""
 logo          : /assets/images/apple-touch-icon-precomposed.png
