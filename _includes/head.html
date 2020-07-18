@@ -5,29 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% if page.mathjax %}
-  <script type="text/javascript">
-    MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
-    document.addEventListener('DOMContentLoaded', function(){
-	function stripcdata(x) {
-	    if (x.startsWith('% <![CDATA[') && x.endsWith('%]]>'))
-		return x.substring(11,x.length-4);
-	    return x;
-	}
-	for (node of document.querySelectorAll('script[type^="math/tex"]')) {
-	    const inline = !node.type.match(/; *mode=display/);
-	    if (inline) {
-		node.outerHTML = "\\(" + stripcdata(node.textContent) + "\\)";
-	    } else {
-		node.outerHTML = "\\[" + stripcdata(node.textContent) + "\\]";
-	    }
-	}
-	var script = document.createElement('script');
-	script.async = true;
-	script.id = "MathJax-script";
-	script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
-	document.head.appendChild(script);
-    }, false);
-  </script>
+  {% include mathjax.html %}
   {% endif %}
 
   {% assign page_title = '' %}
@@ -121,5 +99,10 @@
   <link rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url }}">
   {% endif %}
 
-  <link rel="stylesheet" href="/css/main.css">
+  {% capture styles %}
+  {% include main.scss %}
+  {% endcapture %}
+  <style>
+    {{ styles | scssify }}
+  </style>
 </head>
