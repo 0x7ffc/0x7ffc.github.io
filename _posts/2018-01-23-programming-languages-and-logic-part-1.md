@@ -285,11 +285,15 @@ $$
 显然上面的算术表达式语言有点过于简单，现在我们就要考虑定义一个更加真实的程序语言，一个有if和while控制结构的语言，这个简单的指令式语言–IMP的语法如下：
 
 $$
-\begin{align*}
-arithmetic\;expressions\quad&a\in{Aexp}\quad{a::=\,x\,|\,n\,|\,a_1+a_2\,|\,a_1\times{a_2}}\\
-boolean\;expressions\quad&b\in{Bexp}\quad{b::=\,true\,|\,false\,|\,a_1<a_2}\\
-commands\quad&c\in{Com}\quad{c::=\,skip\,|\,x:=a\,|\,c_1;c_2\,|if\;b\;then\,c_1\,else\,c_2\,|\,while\;b\;do\;c}
-\end{align*}
+arithmetic\;expressions\quad a\in{Aexp}\quad{a::=\,x\,|\,n\,|\,a_1+a_2\,|\,a_1\times{a_2}}
+$$
+
+$$
+boolean\;expressions\quad b\in{Bexp}\quad{b::=\,true\,|\,false\,|\,a_1<a_2}
+$$
+
+$$
+commands\quad c\in{Com}\quad{c::=\,skip\,|\,x:=a\,|\,c_1;c_2\,|if\;b\;then\,c_1\,else\,c_2\,|\,while\;b\;do\;c}
 $$
 
 #### IMP的small-step操作语义

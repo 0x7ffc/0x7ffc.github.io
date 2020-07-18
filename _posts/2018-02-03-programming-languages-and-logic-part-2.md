@@ -266,10 +266,15 @@ $$
 
 $$
 \begin{align*}
-i,j&\in LVar \\
-a&\in Axep::=x\;|\;i\;|\;n\;|\;a_1+a_2\;|a_1\ \\
+i,j\in LVar
+$$
+
+$$
+a\in Axep::=x\;|\;i\;|\;n\;|\;a_1+a_2\;|\;a_1
+$$
+
+$$
 P,Q&\in Assn::=true\;|\;false\;|\;a_1<a_2\;|\;P_1\land P_2\;|\;P_11\lor P_2\;|\;P_1\implies P_2\;|\;\neg P\;|\;\forall i.P\;|\;\exists i.P
-\end{align*}
 $$
 
 为了表示什么是“断言P在store\\(\\;\\sigma\\)中成立”，我们还要定义一些新东西，因为除了store，我们还需要知道逻辑变量的值，首先我们定义一个逻辑变量到整数的映射I：
