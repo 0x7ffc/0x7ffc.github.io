@@ -35,7 +35,7 @@ A[x]=&\{(\sigma,\sigma(x))\}\\
 A[a_1+a_2]=&\{(\sigma,n)|(\sigma,n_1)\in{A[a_1]}\land(\sigma,n_2)\in{A[a_2]}\land{n=n_1+n_2}\}\\
 B[true]=&\{(\sigma,true)\}\\
 B[false]=&\{(\sigma,false)\}\\
-B[a_1\\<a_2]=&\{(\sigma,true)|(\sigma,n_1)\in{A[a_1]}\land(\sigma,n_2)\in{A[a_2]\land{n_1\\<n_2}}\}\cup\\
+B[a_1\lt a_2]=&\{(\sigma,true)|(\sigma,n_1)\in{A[a_1]}\land(\sigma,n_2)\in{A[a_2]\land{n_1\lt n_2}}\}\cup\\
 &\{(\sigma,false)|(\sigma,n_1)\in{A[a_1]}\land(\sigma,n_2)\in{A[a_2]}\land{n_1\geq{n_2}}\}
 \end{align*}
 $$
