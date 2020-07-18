@@ -315,7 +315,7 @@ $$
 
 **Boolean expressions**
 
-\\\[ \\frac{\\langle\\sigma,a\_1\\rangle\\to\\langle\\sigma,a\_1'\\rangle}{\\langle\\sigma,a\_1<a\_2\\rangle\\to\\langle\\sigma,a\_1'<a\_2\\rangle}\\qquad \\frac{\\langle\\sigma,a\_2\\rangle\\to\\langle\\sigma,a\_2'\\rangle}{\\langle\\sigma,n<{a\_2}\\rangle\\to\\langle\\sigma,n<a\_2'\\rangle} \\\]
+\\\[ \\frac{\\langle\\sigma,a\_1\\rangle\\to\\langle\\sigma,a\_1'\\rangle}{\\langle\\sigma,a\_1\\lt a\_2\\rangle\\to\\langle\\sigma,a\_1'<a\_2\\rangle}\\qquad \\frac{\\langle\\sigma,a\_2\\rangle\\to\\langle\\sigma,a\_2'\\rangle}{\\langle\\sigma,n<{a\_2}\\rangle\\to\\langle\\sigma,n<a\_2'\\rangle} \\\]
 
 \\\[ \\frac{n<{m}}{\\langle\\sigma,n<{m}\\rangle\\to\\langle\\sigma,true\\rangle}\\qquad \\frac{n\\ge{m}}{\\langle\\sigma,n<{m}\\rangle\\to\\langle\\sigma,false\\rangle} \\\]
 

@@ -268,7 +268,7 @@ $$
 \begin{align*}
 i,j&\in LVar \\
 a&\in Axep::=x\;|\;i\;|\;n\;|\;a_1+a_2\;|a_1 \\
-P,Q&\in Assn::=true\;|\;false\;|\;a_1\\<a_2\;|\;P_1\land P_2\;|\;P_11\lor P_2\;|\;P_1\implies P_2\;|\;\neg P\;|\;\forall i.P\;|\;\exists i.P
+P,Q&\in Assn::=true\;|\;false\;|\;a_1\lt a_2\;|\;P_1\land P_2\;|\;P_11\lor P_2\;|\;P_1\implies P_2\;|\;\neg P\;|\;\forall i.P\;|\;\exists i.P
 \end{align*}
 $$
 
@@ -294,7 +294,7 @@ $$
 $$
 \begin{align*}
 &\sigma\vDash_I true             \qquad\qquad &(always) \\
-&\sigma\vDash_I a_1<a_2          \qquad\qquad &if\;A_i[a_1](\sigma,I)<A_i[a_2](\sigma,I) \\
+&\sigma\vDash_I a_1\lt a_2          \qquad\qquad &if\;A_i[a_1](\sigma,I)\lt A_i[a_2](\sigma,I) \\
 &\sigma\vDash_I P_1 \land P_2    \qquad\qquad &if\;\sigma\vDash_IP_1\;and\;\sigma\vDash_IP_2 \\
 &\sigma\vDash_I P_1 \lor P_2     \qquad\qquad &if\;\sigma\vDash_IP_1\;or\;\sigma\vDash_IP_2 \\
 &\sigma\vDash_I P_1 \implies P_2 \qquad\qquad &if\;s\nvDash_IP_1\;or\;\sigma\vDash_IP_2 \\
@@ -374,8 +374,8 @@ while x>0 do {
 要证明上面的程序，因为这是一个包含一个赋值语句和一个while语句的程序，就要利用SEQ规则，于是我们要证明下面的两个三元组：
 
 $$
-\{x=n\land n>0\}y:=1\{I\} \\
-\{I\}while\;x>0\;do\{y:=y*x;x:=x-1\}\{y=n!\}
+\{x=n\land n\gt 0\}y:=1\{I\} \\
+\{I\}while\;x\gt 0\;do\{y:=y*x;x:=x-1\}\{y=n!\}
 $$
 
 但要想利用SEQ规则，要先满足SEQ规则的分子（前提条件），也就是要先找到满足上面两个三元组的\\(I\\)。首先\\(I\\)需要满足在循环前后都满足，我们已经说过，\\(I\\)需要是个循环不变量。只看循环体可知（不要看while的条件，因为我们要找的是循环前后都满足的断言），y的值是先乘x的初始值n，再乘下一个x，也就是n-1，然后一步步累乘的结果：
@@ -393,7 +393,7 @@ $$
 要证明\\(I\\)是循环不变量，即必须满足while规则的前提:
 
 $$
-\{I\land x>0\}y:=y*x;x:=x-1\{I\}
+\{I\land x\gt 0\}y:=y*x;x:=x-1\{I\}
 $$
 
 要证明上式，我们倒着走一遍：
@@ -406,10 +406,10 @@ $$
 \{(x-1)!*y*x=n!\land(x-1)\geq0\}y:=y*x\{(x-1)!*y=n!\land(x-1)\geq0\}
 $$
 
-又因为\\(I\\land x>0\\implies(x-1)!\*y\*x=n!\\land(x-1)\\geq0\\)，再由CONSEQUENCE规则，可得上式。现在满足了while的前提条件，终于可以使用while规则了，得到：
+又因为\\(I\\land x\\gt 0\\implies(x-1)!\*y\*x=n!\\land(x-1)\\geq0\\)，再由CONSEQUENCE规则，可得上式。现在满足了while的前提条件，终于可以使用while规则了，得到：
 
 $$
-\{I\}while\;x>0\;do\{y:=y*x;x:=x-1\}\{I\land x\leq0\}
+\{I\}while\;x\gt 0\;do\{y:=y*x;x:=x-1\}\{I\land x\leq0\}
 $$
 
 剩下的只需证明\\(I\\land x\\leq0\\implies y=n!\\)：
@@ -426,7 +426,7 @@ $$
 \{x!*1=n!\land x\geq0\}y:=1\{x!*y=n!\land x\geq0\}
 $$
 
-又因为\\(x=n\\land n>0 \\implies x!\*1=n!\\land x\\geq0\\)，再由CONSEQUENCE规则可得第一个三元组。
+又因为\\(x=n\\land n\\gt 0 \\implies x!\*1=n!\\land x\\geq0\\)，再由CONSEQUENCE规则可得第一个三元组。
 
 小结
 --
