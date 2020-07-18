@@ -3,7 +3,6 @@ description   : "Blog Abount Programming"
 keywords      : "blog, programming, compiler, algorithm"
 url           : https://0x7ffc.github.io # site url
 baseurl       : ""
-cover         : "" # image uri like logo/cover image for site seo
 
 permalink   : /:year/:title/
 markdown    : kramdown
