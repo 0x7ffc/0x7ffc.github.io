@@ -5,17 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% if page.mathjax %}
-  <script>
-    MathJax = {
-	tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']]
-	},
-	svg: {
-	    fontCache: 'global'
-	}
-    };
-  </script>
   <script type="text/javascript">
+    MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] } };
     document.addEventListener('DOMContentLoaded', function(){
 	function stripcdata(x) {
 	    if (x.startsWith('% <![CDATA[') && x.endsWith('%]]>'))
@@ -25,9 +16,9 @@
 	for (node of document.querySelectorAll('script[type^="math/tex"]')) {
 	    const inline = !node.type.match(/; *mode=display/);
 	    if (inline) {
-		node.outerHTML = "\\(" + stripcdata(el.textContent) + "\\)";
+		node.outerHTML = "\\(" + stripcdata(node.textContent) + "\\)";
 	    } else {
-		el.outerHTML = "\\[" + stripcdata(el.textContent) + "\\]";
+		node.outerHTML = "\\[" + stripcdata(node.textContent) + "\\]";
 	    }
 	}
 	var script = document.createElement('script');
