@@ -119,8 +119,9 @@ hr {
 }
 
 .post-item {
-  margin-bottom: 0.2em;
+  margin-bottom: 0.5em;
   display: block;
+  border-bottom: 1px dashed lighten($light-gray-color, 10%);
 
   a {
     color: $action-color;
@@ -128,16 +129,15 @@ hr {
 
   .article-title {
     display: inline-block;
-    width: 85%;
-    //border-bottom: 1px dashed lighten($light-gray-color, 10%);
+    width: calc(100% - 110px);
   }
 
   .date-label {
     //border: 1px solid lighten($light-gray-color, 10%);
+    display: inline-block;
+    width: 110px;
     padding: 0 0.2em;
-    margin-left: 1em;
-    margin-top: 2px;
-    @extend .pull-right;
+    float: right;
   }
 
 }
