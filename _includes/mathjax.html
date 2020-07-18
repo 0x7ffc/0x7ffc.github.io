@@ -1,6 +1,8 @@
 <script type="text/javascript">
-  MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
-	      loader: { source: { '[tex]/amsCd': '[tex]/amscd' } } };
+  MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']],},
+	      loader: { source: { '[tex]/amsCd': '[tex]/amscd' } },
+	      chtml: { scale: 0.87 },
+	    };
   document.addEventListener('DOMContentLoaded', function() {
       function stripcdata(x) {
 	  if (x.startsWith('% <![CDATA[') && x.endsWith('%]]>'))
