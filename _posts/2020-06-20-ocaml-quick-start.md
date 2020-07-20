@@ -65,7 +65,7 @@ ast.ml  dune  lexer.mll  other.ml  parser.mly
 ```lisp
 ; file: ./src/dune
 (library
- (name lib)))
+ (name lib))
 ; you can ignor this.
 (ocamllex lexer)
 (menhir (modules parser))

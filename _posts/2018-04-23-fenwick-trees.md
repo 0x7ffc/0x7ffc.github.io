@@ -43,7 +43,7 @@ For example, in order to get the prefix sum up to index `110`(6), we first get i
 
 And if we want to update certain element in the sequence, we can just draw a straight line to the right at that index and see all the different cells that the fenwick tree must update. For example for `101` we need to update three cells -- `101`, `110` and `1000`. To get the next cell we just have to add the current index's lowest one bit to the current index, `101 + 001 => 110`, `110 + 010 => 1000`. The time complexity of update is `O(log(N))` where N is the number of bits.
 
-As you can see the lowest one bit is important, and the easiest why to calculate it is `i & -i` where i is the index(see [here](https://0x7ffc.github.io/2018/things-I-wish-I-knew-about-bitwise-operators/) for detailed explanation).
+As you can see the lowest one bit is important, and the easiest why to calculate it is `i & -i` where i is the index(see [here](/2018/things-I-wish-I-knew-about-bitwise-operators) for detailed explanation).
 
 The implementation is realy simple though.
 

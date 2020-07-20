@@ -240,4 +240,4 @@ $$
 
 \\\[ times \\triangleq \\lambda m.\\lambda n.\\lambda f.n(m\\;f) \\\]
 
-这一章就差不多了，[下一章](https://0x7ffc.github.io/2017/lambda-caculus-part-2/)我们会介绍更多更复杂的概念。
+这一章就差不多了，[下一章](/2017/lambda-caculus-part-2)我们会介绍更多更复杂的概念。

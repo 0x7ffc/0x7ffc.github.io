@@ -39,6 +39,8 @@ Use `gtypist` if you want to learn typing on Dvorak. Using a keyboard without le
 
 ![](/assets/images/keyboards.png)
 
-Happy typing y'all.
+Colemak is another nice keyboard layout. Dvorak can be a little right hand heavy, and Colemak seems don't have this problem.
+
+In conclusion, just try something other other Qwerty, it may surprise you. Happy typing y'all.
 
 
