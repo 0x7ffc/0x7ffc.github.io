@@ -83,7 +83,7 @@ ubuntu1804.exe run "cd ~; export DISPLAY=127.0.0.1:0.0;  /home/merlin/.spacemacs
 
 It it now a much more acceptable development workflow on windows.
 
-![](/assets/images/emacs-workflow.gif)
+![WSL emacs workflow screenshot](/assets/images/emacs-workflow.gif)
 
 #### Update 5:
 

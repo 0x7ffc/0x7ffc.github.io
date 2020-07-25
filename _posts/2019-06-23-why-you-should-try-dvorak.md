@@ -11,10 +11,10 @@ First of all you should know that Dvorak and most keyboard layouts is designed f
 Here are two keyboard heatmaps which compare Qwerty with Dvorak using some of my blog posts as input text (many thanks to [patrickwied's tool](https://www.patrick-wied.at/projects/heatmap-keyboard/)).
 
 Qwerty:
-![](/assets/images/qwerty-heatmap.png)
+![qwerty keyboard layout heatmap](/assets/images/qwerty-heatmap.png)
 
 Dvorak:
-![](/assets/images/dvorak-heatmap.png)
+![dvorak keyboard layout heatmap](/assets/images/dvorak-heatmap.png)
 
 The difference may not seem too big to you, but I can tell you that the difference is huge when you're typing all day:
 
@@ -23,7 +23,7 @@ The difference may not seem too big to you, but I can tell you that the differen
 
 I can't emphasize more on how much more comfortable it is. You can only feel it after you try it out. On a side note, it also speed up my typing speed:
 
-![](/assets/images/typing-speed.jpg)
+![chart of typing speed](/assets/images/typing-speed.jpg)
 
 I know it's not very fast and many people can type a lot faster, but that's done casually.
 
@@ -37,7 +37,7 @@ The first two can be overcomed by also being able to type on Qwerty. And I overc
 
 Use `gtypist` if you want to learn typing on Dvorak. Using a keyboard without letters on it also helps since you won't be needing to look at your keyboard anyway:
 
-![](/assets/images/keyboards.png)
+![poker2 HHKB keyboard with no letters](/assets/images/keyboards.png)
 
 Colemak is another nice keyboard layout. Dvorak can be a little right hand heavy, and Colemak doesn't seem to have this problem.
 

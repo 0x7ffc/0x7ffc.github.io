@@ -72,7 +72,7 @@ end
 
 The graph for `n = 3` would look like this:
 
-![](/assets/images/dfs-parens.png)
+![depth-first-search of balanced parentheses](/assets/images/dfs-parens.png)
 
 ---
 

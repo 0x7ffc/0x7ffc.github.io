@@ -51,7 +51,7 @@ I also read a lot `Doom`, `Prelude` and `Spacemacs` source code. I learned a lot
 
 Actually, Spacemacs use `use-package` an `which-key` internally. I think with this approach the ideal configuration should look something like this:
 
-![](/assets/images/use-package-fold.png)
+![code emacs-lisp use-packages](/assets/images/use-package-fold.png)
 
 Just bunch of `use-package` forms.
 
