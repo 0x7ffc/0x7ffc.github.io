@@ -2,7 +2,7 @@
 layout: post
 title: "Fun with Fibonacci"
 description: "Many interesting ways to implement Fibonacci in Haskell which utilize laziness and Functional Programming."
-lang: zh_CN
+lang: zh
 mathjax: true
 ---
 

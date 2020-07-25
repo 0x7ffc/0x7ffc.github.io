@@ -2,7 +2,8 @@ title         : "Chen's blog"
 description   : "Chen0x7ffc's blog, mostly about programming languages, algorithms, functional programming, compilers."
 url           : https://0x7ffc.github.io # site url
 baseurl       : ""
-logo          : /assets/images/apple-touch-icon-precomposed.png
+logo          : /assets/images/apple-touch-icon.png
+lang          : en
 
 permalink   : /:year/:title/
 markdown    : kramdown
@@ -31,7 +32,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: /assets/images/apple-touch-icon-precomposed.png
+      image: /assets/images/apple-touch-icon.png
       author: chen0x7ffc
 
 webmaster_verifications:

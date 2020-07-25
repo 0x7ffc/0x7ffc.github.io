@@ -2,7 +2,7 @@
 layout: post
 title: "Lambda Caculus - Part 1"
 description: "Part 1 of an introduction to Lambda Caculus which includes lambda caculus grammar and syntax, evaluation rules, De Bruijn encoding, Church numerals and others."
-lang: zh_CN
+lang: zh
 mathjax: true
 ---
 

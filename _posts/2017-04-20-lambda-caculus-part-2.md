@@ -2,7 +2,7 @@
 layout: post
 title: "Lambda Caculus - Part 2"
 description: "Part 2 of an introduction to Lambda Caculus which includes Y combinator, evaluation context, curring, Continuation-passing style and others."
-lang: zh_CN
+lang: zh
 mathjax: true
 ---
 

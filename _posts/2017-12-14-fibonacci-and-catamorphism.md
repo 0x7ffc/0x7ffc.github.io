@@ -2,7 +2,7 @@
 layout: post
 title: "Fibonacci and Catamorphism"
 description: "Catamorphism is an interesting concept in Category Theroy. I explore these ideas and in the end implement Fibonacci using Catamorphism."
-lang: zh_CN
+lang: zh
 mathjax: true
 ---
 

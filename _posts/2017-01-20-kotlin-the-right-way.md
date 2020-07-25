@@ -2,7 +2,7 @@
 layout: post
 title: "Kotlin Common Practices"
 description: "Kotlin is becoming more popular nowadays, I discovered many people coding the same old way they code Java. So here I am demonstrate some Kotlin common practices to help you write Kotlin the right way."
-lang: zh_CN
+lang: zh
 ---
 
 现在越来越多的人开始跟风使用Kotlin作为他们Android开发的第二语言，但在使用的时候却完全是Java的风格，给我的感觉就像连官方文档都没有看就拿起来开发了，真是可惜了这门语言，所以写这篇文章的目的就是列举使用Kotlin的正确姿势，帮助Android程序员在写代码时Thinking in Kotlin。
