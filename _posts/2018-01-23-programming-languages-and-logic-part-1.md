@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Programming languages and Logic Part 1"
+title: "Programming Languages and Logic Part 1"
 description: "Programming languages share a lot in common with Logic. Here i'll introduce formal semantics including Operational Sematics, Denotational Semantics and Aximatic Semantics through a simple language we made called IMP"
 mathjax: true
 ---

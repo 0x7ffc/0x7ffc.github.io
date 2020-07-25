@@ -102,7 +102,7 @@ Key points:
 
 ### House Robber
 
-Since we've "mastered" DP, let's practice with this really easy problem: [House Robber](https://leetcode.com/problems/house-robber/description). Without really writing the recursive version, one can find these key points easily:
+Since we've "mastered" DP, let's practice with this really easy problem: [House Robber](https://leetcode.com/problems/house-robber/description): You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and it will automatically contact the police if two adjacent houses were broken into on the same night. Given a list of non-negative integers representing the amount of money of each house, determine the maximum amount of money you can rob tonight without alerting the police. Without actually writing the recursive version, one can find these key points easily:
 
 1. dp[i]: the maximum amount of money we can rob from house 0 to i.
 2. If we rob the ith house, then dp[i] = dp[i-2]+nums[i].

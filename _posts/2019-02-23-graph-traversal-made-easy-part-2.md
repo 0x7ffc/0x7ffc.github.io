@@ -45,7 +45,7 @@ The graph has cycle when we visit a vertex (v) which is being processed, by that
 def dfs_have_cycle?(adj, v, parent, processing=Hash.new(false))
   processing[v] = true		       # new line
   adj[v].each do |x|
-    return true if processing[x] # new line
+    return true if processing[x]       # cycle detected
     if !parent.has_key?(x)
       parent[x] = v
       return true if dfs_have_cycle?(adj, x, parent, processing) # slight change

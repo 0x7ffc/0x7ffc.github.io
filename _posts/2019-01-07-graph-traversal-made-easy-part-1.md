@@ -8,7 +8,7 @@ description: "Part 1 of a comprehansive guide to Graph Traverasal algorithms whi
 
 ---
 
-Let's first look at DFS. The idea behind it is simple: go down a path as deep as possible then backtrack as necessery and explor the rest of the branches. The algorithm itself is very clear and simple, the difficult part is:
+Let's first look at DFS. The idea behind it is simple: go down a path as deep as possible then backtrack as necessery and explore the rest of the branches. The algorithm itself is very clear and simple, the difficult part is:
 
 - Identify the graph. Sometimes finding the graph itself IS the problem.
 - Knowing when and how to mark the node as already been explored.
@@ -76,7 +76,7 @@ The graph for `n = 3` would look like this:
 
 ---
 
-Now let's look at a [problem](https://leetcode.com/problems/combination-sum/description) with explicit backtracking: Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target, e.g. given [2,3,5] and target 8, the result is `[[2,2,2,2], [2,3,3], [3,5]]. Here is the code:
+Now let's look at a [problem](https://leetcode.com/problems/combination-sum/description) with explicit backtracking: Given a set of candidate numbers (candidates) (without duplicates) and a target number (target), find all unique combinations in candidates where the candidate numbers sums to target, e.g. given [2,3,5] and target 8, the result is `[[2,2,2,2], [2,3,3], [3,5]]`. Here is the code:
 
 ```ruby
 def solve(candidates, target)

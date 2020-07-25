@@ -4,7 +4,7 @@ title: "The Infamous Interview Question Kth Largest"
 description: "Kth Largest or Kth Smallest is a very commonly asked problem during interviews. Here I'll explore all the possible answers including Priority Queue (Min Heap/Max Heap) and Quick Sort."
 ---
 
-The question is simple: how do you find the kth largest element in an unsorted arry? They love asking it, and you sure as hell should know it. Here I'll just list the possible solutions:
+The question is simple: how do you find the kth largest element in an unsorted array? They love asking it, and you sure as hell should know it. Here I'll just list the possible solutions:
 
 * Just sort it, easy peasy `O(n*log(n))`.
 * Min heap, `O(k+(n-k)*log(k))`.
