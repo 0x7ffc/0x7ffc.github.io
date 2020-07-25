@@ -7,9 +7,23 @@ published: true
   {% include head.html %}
   <body>
     <main class="wrapper">
-      {% include header.html %}
+      <header class="site-header">
+        <nav class="nav">
+          <div class="container">
+            <a class="logo" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a>
+            <ul class="navbar">
+              <li><a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About me</a></li>
+              <li><a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank">RSS</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
       {{ content }}
-      {% include footer.html %}
+      <footer class="site-footer">
+        <div class="container">
+          <small class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; &lt;/&gt; [<a href="mailto:chen0x7ffc@outlook.com">email me</a>]</small>
+        </div>
+      </footer>      
     </main>
   </body>
 </html>
