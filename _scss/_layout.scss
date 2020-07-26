@@ -6,10 +6,21 @@
   }
 }
 
-html,
 body {
   width: 100%;
   height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $base-font-color;
+  background-color: $white-color;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  transition: color 150ms ease;
 }
 
 .clearfix {
@@ -27,8 +38,88 @@ body {
   *zoom: 1;
 }
 
-body {
-  background-color: $base-background-color;
+h1 {
+  font-size: 1.875rem;
+}
+h2 {
+  font-size: 1.625rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+img {
+  margin: 0;
+  max-width: 100%;
+}
+
+li > p {
+  margin: 0;
+  &:last-child {
+    margin-bottom: .5em;
+  }
+}
+
+code {
+  background-color: #ededed;
+  font-family: Consolas, $base-font-family;
+  font-size: 90%;
+  padding: 0 5px;
+}
+
+table {
+  margin: 20px 0;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  table-layout: fixed;
+  word-wrap: break-all;
+}
+
+tr {
+  &:nth-of-type(2n+1) {
+    background-color: #f9f9f9;
+  }
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+
+td,
+th {
+  border-bottom: 3px solid #ddd;
+  border-right: 1px solid #eee;
+  vertical-align: middle;
+  padding: 8px;
+  text-align: left;
+  font-weight: normal;
+}
+
+td {
+  border-bottom-width: 1px;
+}
+
+th {
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+
+blockquote {
+  padding: 0.2em 10px;
+  margin: 1.5em 0;
+  border-left: .75em solid $light-gray-color;
+  background-color: #f2f2f2;
+  quotes: none;
 }
 
 hr {
@@ -44,14 +135,6 @@ hr {
   margin-right: auto;
   max-width: 800px;
   font-weight: normal;
-}
-
-.pull-left {
-  float: left;
-}
-
-.pull-right {
-  float: right;
 }
 
 .link {
@@ -71,50 +154,38 @@ hr {
 .site-header {
   border-bottom: 1px solid lighten($light-gray-color, 5%);
   margin-bottom: $small-spacing;
-  min-height: 80px;
+  width: 100%;
+
+  .site-header-container {
+    display: flex;
+    margin: auto auto;
+    justify-content: space-between;
+    max-width: 800px;
+    padding: 1.5em;
+  }
 }
 
 .logo {
-  float: left;
-  margin: 0 0 1em 0;
-  cursor: pointer;
   letter-spacing: 0.8px;
   font-size: 20px;
-  line-height: 28px;
   font-weight: 300;
-
-  span {
-    font-weight: 700;
-  }
 }
 
 .nav {
-  min-height: 64px;
-}
-
-.navbar {
-  float: right;
-  margin: 0;
-  position: relative;
-  padding: 0;
-  pointer-events: all;
-  cursor: pointer;
-
-  li {
-    display: inline-block;
-    padding: 0 .6em;
-  }
+  display: flex;
 
   a {
-    @extend .link;
-  }
-}
-
-.category-title {
-  margin: 1em 0 0.5em 0;
-
-  &:first-child {
-    margin-top: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 .6em;
+    color: $blue-color;
+    border-bottom: 2px solid transparent;
+    
+    &:hover {
+      border-bottom: 2px solid $blue-color;
+    }
   }
 }
 
@@ -124,7 +195,7 @@ hr {
   border-bottom: 1px dashed lighten($light-gray-color, 10%);
 
   a {
-    color: $action-color;
+    color: $primary-color;
   }
 
   .article-title {
@@ -148,7 +219,8 @@ hr {
   display: inline-block;
   letter-spacing: 1px;
   font-size: .875rem;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
+  margin-top: 0;
 }
 
 .post-title {
@@ -165,42 +237,6 @@ hr {
 
 .post {
   @extend .clearfix;
-}
-
-.pagination {
-  li, a, span {
-    display: inline-block;
-  }
-
-  a, span {
-    font-size: .75rem;
-    padding: .5em;
-  }
-
-  .prev, .next {
-    @extend .link;
-  }
-}
-
-.share {
-  border-top: 0.2em dashed lighten($light-gray-color, 13%);
-  padding-top: $base-spacing;
-  margin-top: $base-spacing * 2;
-
-  p {
-    margin: 0 5em;
-    font-size: .875rem;
-    color: $medium-gray-color;
-  }
-}
-
-.disqus {
-  background-color: lighten($light-gray-color, 16%);
-  padding: $base-spacing 0;
-
-  hr {
-    margin: $base-spacing 0;
-  }
 }
 
 .site-footer {
@@ -239,12 +275,6 @@ hr {
   	width:100%;
   	height:100%;
   }
-}
-
-.divider {
-  border-top: 0.2em solid lighten($light-gray-color, 13%);
-  margin-bottom: $base-spacing * 2;
-  margin-top: $base-spacing * 2;
 }
 
 // This applies from 0px to 600px
