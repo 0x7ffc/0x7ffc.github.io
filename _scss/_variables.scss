@@ -12,9 +12,13 @@ $primary-color: #000;
 $white-color: #fff;
 $black-color: #000;
 $blue-color: #0086B3;
+$red-color: #ba3925;
 $dark-gray-color: #333;
 $medium-gray-color: #999;
 $light-gray-color: #ccc;
 
 // Font Colors
-$base-font-color: rgba($dark-gray-color, .8);
+$base-font-color: rgba($primary-color, .85);
+
+// Screen Size
+$screen-max-width: 800px;
