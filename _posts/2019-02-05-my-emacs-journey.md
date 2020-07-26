@@ -151,7 +151,7 @@ Some editing notes:
 
 Emacs will initialize tool-bar/menu-bar even if you have disabled them in your configuration, to avoid this:
 
-``` {.shell}
+```shell
 cp ~/.emacs.d/.Xresources.example ~/.Xresources
 xrdb ~/.Xresources
 ```
