@@ -199,6 +199,7 @@ hr {
     display: flex;
     margin: auto auto;
     justify-content: space-between;
+    align-items: center;
     max-width: $screen-max-width;
     padding: 1.5em;
   }
@@ -212,12 +213,12 @@ hr {
 
 .nav {
   display: flex;
+  align-items: center;
 
   a {
-    display: inline-flex;
-    align-items: center;
+    display: inline-block;
     text-decoration: none;
-    margin: 0 1em;
+    margin: 0 .6em;
     color: $secondary-color;
     border-bottom: 2px solid transparent;
     
