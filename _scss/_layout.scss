@@ -35,6 +35,12 @@ body {
   line-height: $base-line-height;
 }
 
+p, li, blockquote {
+  font-family: $secondary-font-family;
+  font-size: $base-font-size;
+  text-rendering: optimizeLegibility;
+}
+
 a {
   color: $primary-color;
   text-decoration: none;
