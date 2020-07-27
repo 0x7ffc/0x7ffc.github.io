@@ -6,6 +6,24 @@
   }
 }
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $secondary-color $base-bg-color;
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: $base-bg-color;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $secondary-color;
+  border-radius: 20px;
+  border: 3px solid $base-bg-color;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -39,7 +57,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: $red-color;
+  color: $secondary-color;
 }
 
 h1 {
@@ -74,6 +92,10 @@ li > p {
   &:last-child {
     margin-bottom: .5em;
   }
+}
+
+ul {
+  padding-left: 2em;
 }
 
 code {
@@ -149,7 +171,7 @@ hr {
 }
 
 .link {
-  color: $red-color;
+  color: $secondary-color;
   padding-bottom: .05em;
   border-bottom: 2px solid transparent;
 
@@ -158,7 +180,7 @@ hr {
   &:hover,
   &:focus,
   &:active {
-    border-bottom: 2px solid $red-color;
+    border-bottom: 2px solid $secondary-color;
   }
 }
 
@@ -190,11 +212,11 @@ hr {
     align-items: center;
     text-decoration: none;
     margin: 0 1em;
-    color: $red-color;
+    color: $secondary-color;
     border-bottom: 2px solid transparent;
     
     &:hover {
-      border-bottom: 2px solid $red-color;
+      border-bottom: 2px solid $secondary-color;
     }
   }
 }
@@ -311,7 +333,7 @@ hr {
     &:focus,
     &:active {
       border-bottom: 2px solid transparent;
-      color: $red-color;
+      color: $secondary-color;
     }
   }
 }
