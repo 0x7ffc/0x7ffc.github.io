@@ -22,7 +22,7 @@ def bs(arr, target)
 end
 ```
 
-Easy right? However sometimes you need more than finding a target. Sometimes you may not have a sequence like an array. Let's take it further, array lookup is essentailly a function: given x, f(x) is the search target, and the equality check for finding the target is also just a predicate over f(x): given predicate p, we want to find the first x such that p(f(x)) is true:
+Easy right? However sometimes you need more than finding a target. Sometimes you may not have a sequence like an array. Let's take it further, array lookup is essentially a function: given x, f(x) is the search target, and the equality check for finding the target is also just a predicate over f(x): given predicate p, we want to find the first x such that p(f(x)) is true:
 
 ```ruby
 def bs(f, p, lo, hi)

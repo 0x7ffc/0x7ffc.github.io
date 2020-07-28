@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Jekyll Optimizations"
-description: "Some easy Jekyll optimizations such as local fants, mathjax 3 and CSS inlining which make your site loads faster."
+description: "Some easy Jekyll optimizations such as local fonts, mathjax 3 and CSS inlining which make your site loads faster."
 mathjax: true
 ---
 
@@ -13,7 +13,7 @@ Things we'll do:
 
 ## Local Font
 
-Host fonts locally speed things up a lot, especially when the font CDN is solw in your region.
+Host fonts locally speeds things up a lot, especially when the font CDN is slow in your region.
 
 [Google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) provides easy download interface. I puts all my fonts inside `assets/fonts` folder, and inside a "_scss/_fonts.scss":
 
@@ -43,7 +43,7 @@ In version 2.7, MathJax ran a preprocessor on HTML files that converted math del
 - inline math `$..$` becomes: `<script type="math/tex">...</script>`
 - display math `$$..$$` becomes: `<script type="math/tex; mode=display">...</script>`
 
-MathJax 3 on the other hand directly parses math delimiters in HTML documents and renders math expressions which makes the `math_engine` option in Jekyll's `_config.yml` obsolete. However, GitHub Pages currently always sets `math_enigne: mathjax`, overriding user configuration.
+MathJax 3 on the other hand directly parses math delimiters in HTML documents and renders math expressions which makes the `math_engine` option in Jekyll's `_config.yml` obsolete. However, GitHub Pages currently always sets `math_engine: mathjax`, overriding user configuration.
 
 So to fix this we convert all `<script>` back to plain math Tex.
 

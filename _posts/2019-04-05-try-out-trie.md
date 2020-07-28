@@ -14,9 +14,9 @@ Trie is a data structure which:
 * requires $O(m)$ time when m exists in $W$ where $m$ is the length of $s$.
 * requires less than $O(m)$ when $s$ is not in $W$.
 
-The difference with Hash table is that it can answer prefix-related queries efficently, otherwise you'll have to store all the prefix strings in the Hash table.
+The difference with Hash table is that it can answer prefix-related queries efficiently, otherwise you'll have to store all the prefix strings in the Hash table.
 
-The implementation of Trie is simple, it's a tree like data structure where each node consists of a mapping from character to child nodes, usually represented by an Array size of 256 when $W$ only consists of ASCII character. You can store additional information in the tree nodes, such as a boolean to indicate the end of a word. Let's start with the Class definations.
+The implementation of Trie is simple, it's a tree like data structure where each node consists of a mapping from character to child nodes, usually represented by an Array size of 256 when $W$ only consists of ASCII character. You can store additional information in the tree nodes, such as a boolean to indicate the end of a word. Let's start with the Class definitions.
 
 ```ruby
 class Trie
@@ -89,7 +89,7 @@ words = ["oath","pea","eat","rain"]
 Output: ["eat","oath"]
 ```
 
-If you're not familar with DFS, check my [last post](/2019/graph-traversal-made-easy-part-1). If the current candidate does not exist in all words' prefix, you could stop backtracking immediately which makes Trie a great option:
+If you're not familiar with DFS, check my [last post](/2019/graph-traversal-made-easy-part-1). If the current candidate does not exist in all words' prefix, you could stop backtracking immediately which makes Trie a great option:
 
 ```ruby
 # b: board; i: row; j: column;
@@ -150,7 +150,7 @@ def find_words(board, words)
 end
 ```
 
-When you boil it down, it really is just DFS + Trie, pretty straghtforward.
+When you boil it down, it really is just DFS + Trie, pretty straightforward.
 
 For a far more complex problem see [Palindrome Paris](https://leetcode.com/problems/palindrome-pairs/description). I'll give you a hint: build the Trie with each word reversed.
 

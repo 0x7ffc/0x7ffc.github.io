@@ -8,7 +8,7 @@ First you need to see [this](https://graphics.stanford.edu/~seander/bithacks.htm
 
 ## Lowest set bit
 
-Signed integers are commonly represented using two's complement, and the two's complement is calulated by inverting the digits and adding one. For example:
+Signed integers are commonly represented using two's complement, and the two's complement is calculated by inverting the digits and adding one. For example:
 
 ```
 010       + 110       = 1000
@@ -30,7 +30,7 @@ You may wonder when this'll be useful, go check out `Fenwick Tree`. You can use 
 
 ## Highest set bit
 
-The idea is simple, set all bits right of the highest set bit to 1, then shifts right and substracts that.
+The idea is simple, set all bits right of the highest set bit to 1, then shifts right and subtracts that.
 
 ```c
 int highest_set_bit(int n) {

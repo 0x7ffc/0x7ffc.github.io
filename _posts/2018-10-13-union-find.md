@@ -4,7 +4,7 @@ title: "Union Find"
 description: "Here I demonstrate Ruby implementation of the Weighed Quick-Union find data structure and solve some leecode problems with it."
 ---
 
-The motivation behind Union-Find is thet given some points on an axis, you want to be able to group some points together and answer the query of whether two points are in the same group. It works on 2D panel as well since you can always transform 2D point to 1D.
+The motivation behind Union-Find is that given some points on an axis, you want to be able to group some points together and answer the query of whether two points are in the same group. It works on 2D panel as well since you can always transform 2D point to 1D.
 
 Here is the Ruby implementation of the weighed quick-union with path compression described [here](https://www.coursera.org/learn/algorithms-part1/lecture/ZgecU/quick-union).
 

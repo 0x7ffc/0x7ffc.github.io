@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "My Emacs Journey"
-description: "A journey of me writing .emacs.d . I use Dvorak keyboard layout and evil-mode which makes my experince challenging and interesting."
+description: "A journey of me writing .emacs.d . I use Dvorak keyboard layout and evil-mode which makes my experience challenging and interesting."
 ---
 
 There are some problems while I'm using spacemacs.
 
-- I use Dvorak keybord layout.
+- I use Dvorak keyboard layout.
 - Spacemacs and other popular configs are oriented toward Qwerty layout.
 - I use evil mode which basically is vim inside emacs and it uses "HJKL".
 - I want to use "HTNS" instead of "HJKL" on Dvorak.
@@ -164,7 +164,7 @@ You are gonna use your pinky a lot, and this will result in RSI if not handled p
 Now here are some additional methods which are not mentioned in the blog post:
 
 - If you\'re using a thinkpad as I do, remap the two keys above touchpad and below spacebar to the keys you like.
-- Use spacebar as control: Pressing and releasing results in space as normal, but if held while pressing other keys it acts like control. You can achieve this by using xcape if you\'re on linux and karabiner if on OSX. Both provide additonal features like generate the `Escape` key when `Left Control` is pressed and released on its own, it plays nicely with evil-mode(Vim). Also I\'m on WSL, it works fine with X server.
+- Use spacebar as control: Pressing and releasing results in space as normal, but if held while pressing other keys it acts like control. You can achieve this by using xcape if you\'re on linux and karabiner if on OSX. Both provide additional features like generate the `Escape` key when `Left Control` is pressed and released on its own, it plays nicely with evil-mode(Vim). Also I\'m on WSL, it works fine with X server.
 
 If these two doesn\'t suit you, I think at least you should swap keys around, or use sticky keys....
 

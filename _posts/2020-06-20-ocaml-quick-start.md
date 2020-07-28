@@ -83,19 +83,19 @@ You can check out my [setup](https://github.com/0x7ffc/lain-emacs/blob/master/li
 * `lain/ocaml-utop` will ask which directory you want to run the REPL in, default is the project root.
 * format the project with `, d F` and many other commands in `, d`.
 * eval current expression with `, e e` and many other commands in `, e`.
-* goto defination with `M-.` and go back with `M-,`.
+* goto definition with `M-.` and go back with `M-,`.
 
 ---
 
 ## OCaml
 
-OCaml doesn't have a function composition operator like the Haskell `.`. [Here](https://discuss.ocaml.org/t/why-dont-we-have-a-composition-operator-in-pervasives/1210/18) is a discussion, TLDR: OCaml doesn't faver point-free style.
+OCaml doesn't have a function composition operator like the Haskell `.`. [Here](https://discuss.ocaml.org/t/why-dont-we-have-a-composition-operator-in-pervasives/1210/18) is a discussion, TLDR: OCaml doesn't favor point-free style.
 
 OCaml doesn't have ad hoc polymorphism, it's the reason you have `print_string` and `print_int` instead of a single `print`. You may know this as overloading in other languages. [Modular implicits](http://www.lpw25.net/papers/ml2014.pdf) is OCaml's way to support it, but it seems not under active development. [Here](https://discuss.ocaml.org/t/modular-implicits/144/61) is a discussion, TLDR: Multicore is more important.
 
 Haskell's functor and OCaml's functor are not the same thing, although they both got the name from `Category Theory`. OCaml's functor works on module. In short it's a parametrized module which is a module that takes another module(s) as argument(s) and outputs a module.
 
-You may already know that modules took an improtant role in OCaml. They're not like other languages where they exists just to seperate namespaces or import namespaces. OCaml's module system provides abstraction and composition. It also makes compilation very fast bacause it ensure that each module can be typechecked and compiled incrementally.
+You may already know that modules took an important role in OCaml. They're not like other languages where they exists just to separate namespaces or import namespaces. OCaml's module system provides abstraction and composition. It also makes compilation very fast because it ensure that each module can be typechecked and compiled incrementally.
 
 Java's Generic and Interfaces provides something similar to OCaml module system, here is an example of OCaml generic Set.
 
@@ -116,7 +116,7 @@ module IntSet = Set.Make(IntType)
 module IntSet' = Set.Make(Int)
 ```
 
-However Java doesn't support higher kinded polymorphism, simply put, you can only abstract over type(Set<T>) but not type constructor(T<Integer>). For example, you want to abtract over the notion of a tree which is something with nodes and leafs and you don't care what the nodes actually are, here is how you do it:
+However Java doesn't support higher kinded polymorphism, simply put, you can only abstract over type(Set<T>) but not type constructor(T<Integer>). For example, you want to abstract over the notion of a tree which is something with nodes and leafs and you don't care what the nodes actually are, here is how you do it:
 
 ```ocaml
 module Tree (F : sig type 'a t end) = struct

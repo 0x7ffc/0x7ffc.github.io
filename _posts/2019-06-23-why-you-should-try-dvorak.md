@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Why You Should Try Dvorak"
-description: "Dvorak is a popular keyboard layout alternative to the QWERTY layout, and after typing on Dvorak for 8 years, I certainly can recommand it to anyone want to have a more pleasant typing experience."
+description: "Dvorak is a popular keyboard layout alternative to the QWERTY layout, and after typing on Dvorak for 8 years, I certainly can recommend it to anyone want to have a more pleasant typing experience."
 ---
 
-Dvorak is a popular keyboard layout alternative to the Qwerty layout, and after typing on Dvorak for 8 years, I certainly can recommand it to anyone want to have a more pleasant typing experience.
+Dvorak is a popular keyboard layout alternative to the Qwerty layout, and after typing on Dvorak for 8 years, I certainly can recommend it to anyone want to have a more pleasant typing experience.
 
 First of all you should know that Dvorak and most keyboard layouts is designed for English users. For other languages the experience may vary.
 
@@ -33,7 +33,7 @@ Some caveats though:
 - Can't type on other people's keyboard.
 - Vim is Qwerty oriented.
 
-The first two can be overcomed by also being able to type on Qwerty. And I overcome the last one by writing [my own configuration](https://github.com/0x7ffc/lain-emacs) and remap "HJKL" to "HTNS".
+The first two can be overcome by also being able to type on Qwerty. And I overcome the last one by writing [my own configuration](https://github.com/0x7ffc/lain-emacs) and remap "HJKL" to "HTNS".
 
 Use `gtypist` if you want to learn typing on Dvorak. Using a keyboard without letters on it also helps since you won't be needing to look at your keyboard anyway:
 

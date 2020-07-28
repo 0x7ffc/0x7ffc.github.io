@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Graph Traversal Made Easy - Part 1"
-description: "Part 1 of a comprehansive guide to Graph Traverasal algorithms which includes Depth First Search and solves some leetcode problems with it."
+description: "Part 1 of a comprehensive guide to Graph Traversal algorithms which includes Depth First Search and solves some leetcode problems with it."
 ---
 
-[Last time](/2018/union-find) we solved some graph problems using Union-Find, I mentioned that it can also be solved using graph traversal algorithms like DFS. In this series of article we'll explore the idea of simple graph traversal algoritms like DFS and BFS, and try to solve more interesting problems. In case you didn't know the basics of DFS go watch [this](https://www.coursera.org/lecture/algorithms-part2/depth-first-search-mW9aG).
+[Last time](/2018/union-find) we solved some graph problems using Union-Find, I mentioned that it can also be solved using graph traversal algorithms like DFS. In this series of article we'll explore the idea of simple graph traversal algorithms like DFS and BFS, and try to solve more interesting problems. In case you didn't know the basics of DFS go watch [this](https://www.coursera.org/lecture/algorithms-part2/depth-first-search-mW9aG).
 
 ---
 
@@ -12,7 +12,7 @@ Let's first look at DFS. The idea behind it is simple: go down a path as deep as
 
 - Identify the graph. Sometimes finding the graph itself IS the problem.
 - Knowing when and how to mark the node as already been explored.
-- Knowing when to backtrack. Sometimes we "don't need" backtraking at all.
+- Knowing when to backtrack. Sometimes we "don't need" backtracking at all.
 - Knowing when to stop and what to do when it happens.
 - Knowing what to return and how to return it.
 

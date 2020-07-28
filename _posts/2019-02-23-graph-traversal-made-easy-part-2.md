@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Graph Traversal Made Easy - Part 2"
-description: "Part 2 of a comprehansive guide to Graph Traverasal algorithms which includes Depth First Search and solves some leetcode problems with it."
+description: "Part 2 of a comprehensive guide to Graph Traversal algorithms which includes Depth First Search and solves some leetcode problems with it."
 ---
 
-Now you have an overview of DFS, I want to generize DFS a little bit. Firstly, the way the graph is specified is as an adjacency lists:
+Now you have an overview of DFS, I want to generalize DFS a little bit. Firstly, the way the graph is specified is as an adjacency lists:
 
-- The graph contians vertices (V) and edges (E).
+- The graph contains vertices (V) and edges (E).
 - For each vertex v, adj[v] is the list of vertices it's connected to. We can represent it using Hash table.
 
 ```ruby
@@ -32,7 +32,7 @@ def dfs(adj, v, parent)
 end
 ```
 
-- The first step is building the adjancency lists.
+- The first step is building the adjacency lists.
 - We use `parent` (a hash table) to mark vertices as visited. If we've visited it, we just skip it.
 
 ---
@@ -60,7 +60,7 @@ end
 
 ### Topological Sort
 
-Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge `u->v`, vertex u comes before v in the ordering. We can't have cycle here because the ordering'd be impossible. The reverse order of the finishing times of DFS is the topological sort. It's better for you to understand if we just sovle a problem with it, It's a variation of the `Job Scheduling` problem: [alien dictionary](https://leetcode.com/problems/alien-dictionary/description). There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language. E.g. `["wrt", "wrf", "er", "ett", "rftt"] => "wertf"`.
+Topological sorting for Directed Acyclic Graph (DAG) is a linear ordering of vertices such that for every directed edge `u->v`, vertex u comes before v in the ordering. We can't have cycle here because the ordering would be impossible. The reverse order of the finishing times of DFS is the topological sort. It's better for you to understand if we just solve a problem with it, It's a variation of the `Job Scheduling` problem: [alien dictionary](https://leetcode.com/problems/alien-dictionary/description). There is a new alien language which uses the latin alphabet. However, the order among letters are unknown to you. You receive a list of non-empty words from the dictionary, where words are sorted lexicographically by the rules of this new language. Derive the order of letters in this language. E.g. `["wrt", "wrf", "er", "ett", "rftt"] => "wertf"`.
 
 Let's build the graph (adjacency lists) first.
 
@@ -117,7 +117,7 @@ def dfs(g, v, parent, topo, processing=Hash.new(false))
 end
 ```
 
-Notice that we can actually get rid of `processinng` and instead use `topo` to detect cycle: `topo.include?(x)`. `include?` is an `O(n)` opertion which can be optimized by switching `topo` to a hash table.
+Notice that we can actually get rid of `processing` and instead use `topo` to detect cycle: `topo.include?(x)`. `include?` is an `O(n)` operation which can be optimized by switching `topo` to a hash table.
 
 It may worries you that in this problem it takes some effort to build the graph, but sometimes it's quite simple. For example in [this problem](https://leetcode.com/problems/course-schedule-ii/description), I can build the graph in one line of ruby and the rest is exactly the same:
 

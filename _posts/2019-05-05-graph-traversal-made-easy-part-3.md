@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Graph Traversal Made Easy - Part 3"
-description: "Part 3 of a comprehansive guide to Graph Traverasal algorithms which includes (Bi-Directional) Breadth First Search and solves some leetcode problems with it."
+description: "Part 3 of a comprehensive guide to Graph Traversal algorithms which includes (Bi-Directional) Breadth First Search and solves some leetcode problems with it."
 ---
 
-DFS is often used to explore the whole graph. BFS on the other hand explore the graph layer by layer and that'll help us finding the shortest paths. It also can tells us which vertices are unreadchable from s, in that case the shortes path is infinity.
+DFS is often used to explore the whole graph. BFS on the other hand explore the graph layer by layer and that'll help us finding the shortest paths. It also can tells us which vertices are unreachable from s, in that case the shortest path is infinity.
 
 BFS by itself is simple:
 
@@ -32,7 +32,7 @@ end
 
 - `frontier`, things you can reach from s using `i-1` moves
 - `next`, things you can reach from s using `i` moves
-- `parent` forms the shorets paths.
+- `parent` forms the shortest paths.
 
 A lot of variables in above code is optional:
 
@@ -70,7 +70,7 @@ end
 - Transform `word_list` to a Set so that lookup time is O(1).
 - We can treat Ruby array as a Queue using `shift` and `<<`.
 - We used a trick: `q.size.times` and `x = q.shift` so that after each loop `q` will be the new frontier.
-- We skiped building the graph. Just checking neighbors inside BFS.
+- We skipped building the graph. Just checking neighbors inside BFS.
 - We delete the word in the `word_list` as marking it as "seen".
 
 In this problem it doesn't require to output the actual path, but we can get it easily using `parent`:
@@ -84,7 +84,7 @@ end
 path.unshift(p)
 ```
 
-There is a [variation of this problem](https://leetcode.com/problems/word-ladder-ii/description) where you need to return all the shortest paths instead of just one. You can't just use `parent` because a word can have multiple parents. A simple solution'd be changing `parent` to `{v=>Set}` and use DFS in the end to generate all the paths. I'll leave to to you since it's not that different and you can practice writing DFS.
+There is a [variation of this problem](https://leetcode.com/problems/word-ladder-ii/description) where you need to return all the shortest paths instead of just one. You can't just use `parent` because a word can have multiple parents. A simple solution would be changing `parent` to `{v=>Set}` and use DFS in the end to generate all the paths. I'll leave to to you since it's not that different and you can practice writing DFS.
 
 There is a common optimization called Bi-Directional BFS, simply put, you do BFS on both ends and always search from the one with smaller frontier.
 

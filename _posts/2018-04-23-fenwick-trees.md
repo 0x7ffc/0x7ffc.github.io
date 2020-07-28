@@ -15,7 +15,7 @@ range_sum(2, 5) => 19
 
 Of course the easiest way to do this is just run a for loop on the sequence and query each of the array locations. And the worst case would be a query on the entire array which is O(N) and that's a big no-no.
 
-And the next easy step is to memorise more information by doing some pre computation, for example by computing prefix sums:
+And the next easy step is to memorize more information by doing some pre computation, for example by computing prefix sums:
 
 ```
 [2 4 1 5  6  7  7 ]
@@ -45,7 +45,7 @@ And if we want to update certain element in the sequence, we can just draw a str
 
 As you can see the lowest one bit is important, and the easiest why to calculate it is `i & -i` where i is the index(see [here](/2018/things-I-wish-I-knew-about-bitwise-operators) for detailed explanation).
 
-The implementation is realy simple though.
+The implementation is really simple though.
 
 ```ruby
 # API is zero-based, implementation is one-based.
@@ -92,7 +92,7 @@ end
 
 There are some interesting problems you can solve using Fenwick Tree, for example [leetcode problem 315](https://leetcode.com/problems/count-of-smaller-numbers-after-self/description), basically a counting inversions problem. We can convert this problem to range sum query problem, thus using Fenwick Tree:
 
-1. Compress the input by rank, map the input to its rank: [5,2,6,1] => [2,1,3,0], the result'd be the same.
+1. Compress the input by rank, map the input to its rank: [5,2,6,1] => [2,1,3,0], the result would be the same.
 2. Iterate compressed input from right to left, given current rank x, update Fenwick Tree at index x by 1 since it represents that we've seen the number one more time, the count of elements smaller to the right of x would just be the range sum of Fenwick Tree from 0 to x-1, hence bit.sum(x-1).
 
 ```ruby

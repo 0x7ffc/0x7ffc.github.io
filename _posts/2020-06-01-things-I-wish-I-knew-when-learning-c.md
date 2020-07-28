@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Things I Wish I Knew When Learning C"
-description: "Some interesting aspects of C that I wich I knew, such as The Clockwise/Spiral rule, Structure padding, Anonymous struct / union, X Macros and many others."
+description: "Some interesting aspects of C that I wish I knew, such as The Clockwise/Spiral rule, Structure padding, Anonymous struct / union, X Macros and many others."
 ---
 
 ## The Clockwise/Spiral rule
@@ -18,7 +18,7 @@ See this wonderful explanation [here](http://c-faq.com/decl/spiral.anderson.html
 
 ---
 
-## Version dectection
+## Version detection
 
 * `__STDC__` C90 defines this macro whose value is 1 indication that the compiler fully implements Standard C.
 * `__STDC_VERSION__` C99 defines this macro whose value indicates which standard the compiler supports.
@@ -41,7 +41,7 @@ See this wonderful explanation [here](http://c-faq.com/decl/spiral.anderson.html
 
 ## Boolean
 
-C90 had no build-in boolean type. C99 added a bolean type `_Bool` which now is a keyword. `bool` is just an alias for `_Bool`, and to use these types you must include `<stdbool.h>`.
+C90 had no build-in boolean type. C99 added a boolean type `_Bool` which now is a keyword. `bool` is just an alias for `_Bool`, and to use these types you must include `<stdbool.h>`.
 
 ---
 
@@ -58,7 +58,7 @@ However these exact-width integer types are optional, meaning they may be absent
 
 ## Anonymous struct / union
 
-Anonymous struct are useful when you don't want to name your struct/union inside another struct/union. For example, when implementing a dynamically typed language, you need a type to represent all the values in your language, an easy way to do so is to use a enum and a annoymous union inside your struct.
+Anonymous struct are useful when you don't want to name your struct/union inside another struct/union. For example, when implementing a dynamically typed language, you need a type to represent all the values in your language, an easy way to do so is to use a enum and a anonymous union inside your struct.
 
 ```c
 typedef struct {
@@ -99,7 +99,7 @@ It'll print 8 instead of 5 because a padding of 3 bytes are added between c and 
 In C90, if you want a fixed value of a structure type, you have to create a named constant object.
 
 ```c
-typedef sturct {
+typedef struct {
   int a;
   int b;  
 } foo;
@@ -160,7 +160,7 @@ free(f);   // no need to free(f.b);
 
 ## intprt_t / uintptr_t
 
-These two types are capable of holding pointers to objects (not pointers to funcitons). Use them when you want to do arithmetic operations on pointers other than `+` or `-`. Now you must wondering "why? why would I do that?", well for example, in the `Lua` languages implementation all values are represented using double precision number which is a technique call `NAN-tagging`. Here is the code for my toy languages implementation using `NAN-tagging`.
+These two types are capable of holding pointers to objects (not pointers to functions). Use them when you want to do arithmetic operations on pointers other than `+` or `-`. Now you must wondering "why? why would I do that?", well for example, in the `Lua` languages implementation all values are represented using double precision number which is a technique call `NAN-tagging`. Here is the code for my toy languages implementation using `NAN-tagging`.
 
 ```c
 typedef uint64_t Value;  // you can use double here, only uint64_t is more convenient.
@@ -240,7 +240,7 @@ To write direct threaded code(computed goto), GUN labels as values extension is 
 int *ip;
 static void *dispatch_table[] = { &&add, &&subtract, ... };
 
-void interprent() {  
+void interpret() {  
   goto *dispatch_table[*ip++];
 add:
   int b = pop();

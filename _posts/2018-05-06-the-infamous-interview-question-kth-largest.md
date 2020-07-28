@@ -34,7 +34,7 @@ Here are some questions you should be able to answer with ease:
 
   A: shuffle the array first.
 
-Now since this problem is so simple, interviewer often wants you to implement the binary heap, it is crucial that you know how to construct the heap in `O(n)` time. Since ruby doesn't have build-in heap, it's good practise to write one yourself, (watch [this](https://www.coursera.org/lecture/algorithms-part1/binary-heaps-Uzwy6)):
+Now since this problem is so simple, interviewer often wants you to implement the binary heap, it is crucial that you know how to construct the heap in `O(n)` time. Since ruby doesn't have build-in heap, it's good practice to write one yourself, (watch [this](https://www.coursera.org/lecture/algorithms-part1/binary-heaps-Uzwy6)):
 
 ```ruby
 class MinHeap
