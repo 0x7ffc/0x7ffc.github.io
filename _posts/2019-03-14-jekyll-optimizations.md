@@ -15,7 +15,7 @@ Things we'll do:
 
 Host fonts locally speeds things up a lot, especially when the font CDN is slow in your region.
 
-[Google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) provides easy download interface. I puts all my fonts inside `assets/fonts` folder, and inside a "_scss/_fonts.scss":
+[Google webfonts helper](https://google-webfonts-helper.herokuapp.com/fonts) provides easy download interface. I put all my fonts inside `assets/fonts` folder, and inside "_scss/_fonts.scss":
 
 ```css
 @font-face {
