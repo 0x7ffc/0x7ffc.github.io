@@ -53,39 +53,39 @@ The implementation is really simple though.
 class BIT
 
   def initialize(arg)
-    @size = arg + 1
-    @tabel = Array.new(@size, 0)
+	@size = arg + 1
+	@table = Array.new(@size, 0)
   end
 
   # update position i by delta
   def update(i, delta)
-    i += 1
-    while i < @size
-      @table[i] += delta
-      i += lowest_one_bit(i)
-    end
+	i += 1
+	while i < @size
+	  @table[i] += delta
+	  i += lowest_one_bit(i)
+	end
   end
 
   # compute the prefix sum value[0, i]
   def sum(i)
-    i += 1
-    sum = 0
-    while i > 0
-      sum += @table[i]
-      i -= lowest_one_bit(i)
-    end
-    sum
+	i += 1
+	sum = 0
+	while i > 0
+	  sum += @table[i]
+	  i -= lowest_one_bit(i)
+	end
+	sum
   end
 
   # compute the range sum value[i, j]
   def range_sum(i, j)
-    sum(j) - sum(i-1)
+	sum(j) - sum(i-1)
   end
 
   private
 
   def lowest_one_bit(i)
-    i & -i
+	i & -i
   end
 end
 ```
@@ -101,10 +101,10 @@ def count_smaller(nums)
   Set.new(nums.sort).each_with_index { |n, i| rank[n] = i }
   bit = BIT.new(rank.size)
   [].tap do |r|
-    nums.map { |n| rank[n] }.reverse_each do |i|
-      bit.update(i, 1)
-      r.unshift(bit.sum(i-1))
-    end
+	nums.map { |n| rank[n] }.reverse_each do |i|
+	  bit.update(i, 1)
+	  r.unshift(bit.sum(i-1))
+	end
   end
 end
 ```
