@@ -9,13 +9,13 @@ Here are some funny short algorithms that you probably don't know.
 
 ## Jay Kadane's Algorithm
 
-At first let's see the problem: given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A naive $O(n^3)$ solution would be iterating through all the subarrays. We can optimize to $O(n^2)$ by using prefix sum. Upon further inspection, we can come up with this $O(n)$ solution:
+Let's see the problem first: given an integer array `nums`, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum. A naive $O(n^3)$ solution would be iterating through all the subarrays. We can optimize to $O(n^2)$ by using prefix sum. Upon further inspection, we can come up with this $O(n)$ solution:
 
 1. Let `S` be the prefix sum: `s[i] == nums[0]+nums[1]+...+nums[i]`.
 2. Given `r`, we want to find such `l <= r`, so that `s[r]-s[l-1]` is
    maximal, clearly we need `s[l-1]` to be minimum of `s[0..r-1]`.
 3. Better yet, we don't actually need to build `S`, we just need
-   the current prefix sum and the minium prefix sum before it.
+   the current prefix sum and the minimum prefix sum before it.
 
 ```ruby
 def max_sub_array_a(nums)
