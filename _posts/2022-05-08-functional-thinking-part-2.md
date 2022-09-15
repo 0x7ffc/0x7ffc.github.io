@@ -26,7 +26,7 @@ description: "Introducting to basic Functional Programming ideas such as Functio
 
 ![image.png](/assets/images/functional-thinking_bind.png)
 
-* **常见方法名**：`bind`, `flatMap`, `andThen`, `collect`, `SelectManp`, `>>=`, `=<<`
+* **常见方法名**：`bind`, `flatMap`, `andThen`, `collect`, `SelectMany`, `>>=`, `=<<`
 * **作用**：把跨世界函数变成`E`时间函数，可以借此组合跨世界（monadic）的函数
 * **Signature**：`(a->E<b>) -> E<a> -> E<b>`
 * **Signature变种**：`E<a> -> (a->E<b>) -> E<b>`
