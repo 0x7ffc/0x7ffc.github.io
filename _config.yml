@@ -36,9 +36,9 @@ defaults:
       author: chen0x7ffc
 
 webmaster_verifications:
-  google: LrbQGpNpmw_icgvGLPdKTu5LasO_u7Bu3w2s0xoHrlQ
-  bing: 5983F4DF7578DCA8D2431DFD9F3C742F
-  baidu: TDbxJgoIdP
+  google: KissFwReOvLYre9-1S6EKCMFDAC4uUOvq_EdFGxl6F4
+  bing:
+  baidu:
 
 plugins:
   - jekyll-seo-tag
