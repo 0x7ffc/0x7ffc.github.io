@@ -7,7 +7,7 @@ $base-font-size: 17px;
 
 // Other Sizes
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: calc($base-spacing / 2);
 
 // Colors
 $white-color: #fff;
