@@ -390,7 +390,7 @@ hr {
  .card-header {
   text-align: center;
   padding: 4px;
-  color: rgb(0 0 0 / 60%);
+  color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   font-weight: bold;
  }
@@ -404,7 +404,7 @@ hr {
  
  .card-body-text {
   font-family: "Noto Sans";
-  color: rgb(0 0 0 / 50%);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
   font-weight: 600;
  }

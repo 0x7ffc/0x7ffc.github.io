@@ -54,9 +54,7 @@ permalink: /about/
       />
       <div class="card-body-text">Nanjing</div>
     </div>
-  </div>
-
-  
+  </div>  
 </div>
 
 ---
