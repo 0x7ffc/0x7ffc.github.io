@@ -369,3 +369,48 @@ hr {
     }
   }
 }
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+ }
+ 
+ .card {
+   font-family: "Noto Sans";
+   display: flex;
+   flex-direction: column;
+   width: 112px;
+   height: 182px;
+   border-radius: 10px;
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   overflow: hidden;
+ }
+ 
+ .card-header {
+  text-align: center;
+  padding: 4px;
+  color: rgb(0 0 0 / 60%);
+  font-size: 14px;
+  font-weight: bold;
+ }
+ 
+ .card-body {
+   flex-grow: 1;
+   padding: 6px;
+   text-align: center;
+   font-size: 14px;
+ }
+ 
+ .card-body-text {
+  font-family: "Noto Sans";
+  color: rgb(0 0 0 / 50%);
+  font-size: 12px;
+  font-weight: 600;
+ }
+ 
+ .card img {
+  border-radius: 4px;
+  width: 100px;
+  height: 100px;
+ }
