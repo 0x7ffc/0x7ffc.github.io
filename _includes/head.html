@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if page.mathjax %}
+  {% include mathjax.html %}
+  {% endif %}
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+
+  <link rel="shortcut icon" href="/assets/images/favicon.ico">
+  <link rel="icon" href="/assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+  <link rel="image_src" href="/assets/images/apple-touch-icon.png">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="{{ "/sitemap.xml" | prepend: site.baseurl | prepend: site.url }}" />
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  {% seo %}
+
+  {% capture styles %}
+  {% include main.scss %}
+  {% endcapture %}
+  <style>
+    {{ styles | scssify }}
+  </style>
+</head>

@@ -1,0 +1,65 @@
+title         : "Chen's blog"
+description   : "Chen0x7ffc's blog, mostly about programming languages, algorithms, functional programming, compilers."
+url           : https://0x7ffc.github.io # site url
+baseurl       : ""
+logo          : /assets/images/apple-touch-icon.png
+lang          : en
+
+permalink   : /:year/:title/
+markdown    : kramdown
+highlighter : rouge
+
+source      : ./
+destination : ./_site
+
+sass:
+  sass_dir  : _scss
+  style     : compressed # expanded
+
+author:
+  name     : "chen0x7ffc"
+
+social:
+  name: chen0x7ffc
+  links:
+    - https://github.com/0x7ffc
+
+twitter:
+  username: chen0x7ffc
+  card: summary
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/apple-touch-icon.png
+      author: chen0x7ffc
+
+webmaster_verifications:
+  google: LrbQGpNpmw_icgvGLPdKTu5LasO_u7Bu3w2s0xoHrlQ
+  bing:
+  baidu:
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+exclude:
+  - "gulp"
+  - "node_modules"
+  - "bower"
+  - "bower_components"
+  - "config.rb"
+  - "src"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "package.json"
+  - "gulpfile.js"
+  - "README.md"
+  - "Rakefile"
+  - "changelog.md"
+  - "script"
+  - "vendor"

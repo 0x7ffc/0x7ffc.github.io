@@ -1,0 +1,26 @@
+<script type="text/javascript">
+  MathJax = { tex: { inlineMath: [['$', '$'], ['\\(', '\\)']],},
+	      loader: { source: { '[tex]/amsCd': '[tex]/amscd' } },
+	      chtml: { scale: 0.87 },
+	    };
+  document.addEventListener('DOMContentLoaded', function() {
+      function stripcdata(x) {
+	  if (x.startsWith('% <![CDATA[') && x.endsWith('%]]>'))
+		return x.substring(11,x.length-4);
+	  return x;
+      }
+      for (node of document.querySelectorAll('script[type^="math/tex"]')) {
+	  const inline = !node.type.match(/; *mode=display/);
+	    if (inline) {
+		node.outerHTML = "\\(" + stripcdata(node.textContent) + "\\)";
+	    } else {
+		node.outerHTML = "\\[" + stripcdata(node.textContent) + "\\]";
+	    }
+      }
+      var script = document.createElement('script');
+      script.async = true;
+      script.id = "MathJax-script";
+      script.src = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js";
+	document.head.appendChild(script);
+  }, false);
+</script>

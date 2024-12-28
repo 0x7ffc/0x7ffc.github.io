@@ -1,0 +1,25 @@
+---
+layout: compress
+published: true
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang }}">
+  {% include head.html %}
+  <body>
+    <header class="site-header">
+      <div class="site-header-container">
+	<a class="logo" href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title }}</a>
+	<nav class="nav">
+	  <a href="{{ '/about' | prepend: site.baseurl | prepend: site.url }}">About me</a>
+	  <a href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" target="_blank">RSS</a>
+	</nav>
+      </div>
+    </header>
+    {{ content }}
+    <footer class="site-footer">
+      <div class="container">
+	<small class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; &lt;/&gt; [<a href="mailto:chen0x7ffc@outlook.com">email me</a>]</small>
+      </div>
+    </footer>
+  </body>
+</html>

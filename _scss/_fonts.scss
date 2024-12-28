@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+       url('/assets/fonts/roboto-mono-light.woff2') format('woff2'),
+       url('/assets/fonts/roboto-mono-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Roboto Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local(''),
+       url('/assets/fonts/roboto-mono-regular.woff2') format('woff2'),
+       url('/assets/fonts/roboto-mono-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Serif'), local('NotoSerif'),
+       url('/assets/fonts/noto-serif-regular.woff2') format('woff2'),
+       url('/assets/fonts/noto-serif-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Noto Serif Italic'), local('NotoSerif-Italic'),
+       url('/assets/fonts/noto-serif-italic.woff2') format('woff2'),
+       url('/assets/fonts/noto-serif-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Noto Serif Bold'), local('NotoSerif-Bold'),
+       url('/assets/fonts/noto-serif-bold.woff2') format('woff2'),
+       url('/assets/fonts/noto-serif-bold.woff') format('woff');
+}
