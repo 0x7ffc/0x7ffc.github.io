@@ -25,7 +25,7 @@ permalink: /about/
     </div>
     <div class="card-body" style="background-color: rgb(152, 123, 155)">
       <img
-        src="/assets/images/lain.jpg"
+        src="https://s21.ax1x.com/2024/12/28/pAxJeER.jpg"
         style="border-radius: 99px"
       />
       <div class="card-body-text">小玲</div>
