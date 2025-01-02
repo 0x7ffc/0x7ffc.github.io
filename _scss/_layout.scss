@@ -35,7 +35,9 @@ body {
   line-height: $base-line-height;
 }
 
-p, li, blockquote {
+p,
+li,
+blockquote {
   font-family: $secondary-font-family;
   font-size: $base-font-size;
   text-rendering: optimizeLegibility;
@@ -62,7 +64,12 @@ a {
   *zoom: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: $secondary-color;
 }
 
@@ -96,7 +103,7 @@ img {
 li > p {
   margin: 0;
   &:last-child {
-    margin-bottom: .5em;
+    margin-bottom: 0.5em;
   }
 }
 
@@ -124,7 +131,7 @@ table {
 }
 
 tr {
-  &:nth-of-type(2n+1) {
+  &:nth-of-type(2n + 1) {
     background-color: #f9f9f9;
   }
   &:hover {
@@ -151,11 +158,10 @@ th {
   padding-bottom: 10px;
 }
 
-
 blockquote {
   padding: 0.2em 10px;
   margin: 1.5em 0;
-  border-left: .75em solid $light-gray-color;
+  border-left: 0.75em solid $light-gray-color;
   background-color: $base-bg-color;
   quotes: none;
   box-shadow: $base-box-shadow;
@@ -178,7 +184,7 @@ hr {
 
 .link {
   color: $secondary-color;
-  padding-bottom: .05em;
+  padding-bottom: 0.05em;
   border-bottom: 2px solid transparent;
 
   transiton: border 300ms linear;
@@ -218,10 +224,10 @@ hr {
   a {
     display: inline-block;
     text-decoration: none;
-    margin: 0 .6em;
+    margin: 0 0.6em;
     color: $secondary-color;
     border-bottom: 2px solid transparent;
-    
+
     &:hover {
       border-bottom: 2px solid $secondary-color;
     }
@@ -249,7 +255,6 @@ hr {
     padding: 0 0.2em;
     float: right;
   }
-
 }
 
 .post-meta {
@@ -257,7 +262,7 @@ hr {
   text-transform: uppercase;
   display: inline-block;
   letter-spacing: 1px;
-  font-size: .875rem;
+  font-size: 0.875rem;
   margin-bottom: 0px;
   margin-top: 0;
 }
@@ -288,7 +293,7 @@ hr {
 
   small {
     display: block;
-    font-size: .75rem;
+    font-size: 0.75rem;
     color: darken($medium-gray-color, 10%);
   }
 
@@ -298,20 +303,20 @@ hr {
 }
 
 .video-container {
-	position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
 
   iframe,
   object,
   embed {
-    position:absolute;
-  	top:0;
-  	left:0;
-  	width:100%;
-  	height:100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -374,43 +379,88 @@ hr {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
- }
- 
- .card {
-   font-family: "Noto Sans";
-   display: flex;
-   flex-direction: column;
-   width: 112px;
-   height: 182px;
-   border-radius: 10px;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-   overflow: hidden;
- }
- 
- .card-header {
+}
+
+.card {
+  font-family: "Noto Sans";
+  display: flex;
+  flex-direction: column;
+  width: 112px;
+  height: 182px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  &.pink {
+    .card-header {
+      background-color: rgba(255, 133, 156, 0.4);
+    }
+    .card-body {
+      background-color: rgb(255, 133, 156);
+    }
+  }
+
+  &.purple {
+    .card-header {
+      background-color: rgba(152, 123, 155, 0.4);
+    }
+    .card-body {
+      background-color: rgb(152, 123, 155);
+    }
+  }
+
+  &.blue {
+    .card-header {
+      background-color: rgba(121, 195, 234, 0.4);
+    }
+    .card-body {
+      background-color: rgb(121, 195, 234);
+    }
+  }
+
+
+  &.grey {
+    .card-header {
+      background-color: rgb(137, 139, 145, 0.4);
+    }
+    .card-body {
+      background-color: rgb(137, 139, 145);
+    }
+  }
+
+  &.tall {
+    height: 229px; /* Update the card height for book class */
+    
+    img {
+      height: 147px; /* Update the image height for book class */
+    }
+  }
+}
+
+.card-header {
   text-align: center;
   padding: 4px;
   color: rgba(0, 0, 0, 0.6);
   font-size: 14px;
   font-weight: bold;
- }
- 
- .card-body {
-   flex-grow: 1;
-   padding: 6px;
-   text-align: center;
-   font-size: 14px;
- }
- 
- .card-body-text {
+}
+
+.card-body {
+  flex-grow: 1;
+  padding: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.card-body-text {
   font-family: "Noto Sans";
   color: rgba(0, 0, 0, 0.5);
   font-size: 12px;
   font-weight: 600;
- }
- 
- .card img {
+}
+
+.card img {
   border-radius: 4px;
   width: 100px;
   height: 100px;
- }
+}
