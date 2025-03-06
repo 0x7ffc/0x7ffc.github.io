@@ -4,5 +4,5 @@ permalink: /about/
 ---
 
 <div class="dify-wrapper">
-  <iframe class="dify" src="https://www.hnsxysw.cn:85/chatbot/duB5TWDvo9BMz66e"></iframe>
+  <iframe class="dify" src="https://www.hnsxysw.cn:85/chatbot/O48fygGoY4Ll49zO"></iframe>
 </div>
