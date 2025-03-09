@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美味小厨师</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", "SimHei", sans-serif;
+            background-color: #f9f3e5;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0px 20px;
+        }
+        
+        h1 {
+            color: #e74c3c;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 10px 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        h2 {
+            color: #e67e22;
+            font-size: 1.5em;
+            border-bottom: 2px solid #f1c40f;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        
+        .option {
+            position: relative;
+        }
+        
+        .option input[type="radio"] {
+            display: none;
+        }
+        
+        .option label {
+            display: inline-block;
+            background-color: #f5f5f5;
+            border: 2px solid #ddd;
+            border-radius: 50px;
+            padding: 10px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .option input[type="radio"]:checked + label {
+            background-color: #fff4e6;
+            border-color: #ffb347;
+            transform: scale(1.05);
+        }
+        
+        button {
+            display: block;
+            margin: 30px auto;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3);
+        }
+        
+        button:hover {
+            background-color: #27ae60;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        .result {
+            display: none;
+            background-color: #fff9e6;
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px dashed #f1c40f;
+        }
+        
+        .result-title {
+            color: #e67e22;
+            text-align: center;
+            font-size: 1.6em;
+            margin-bottom: 20px;
+        }
+        
+        .pinyin-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+        
+        /* Add new divider style */
+        .dish-divider {
+            width: 80%;
+            height: 2px;
+            background: #f1c40f;
+            margin: 20px auto;
+            opacity: 0.6;
+        }
+        
+        .char-block {
+            display: inline-flex;
+            flex-direction: column;
+            align-items: center;
+            width: 60px;
+            height: 80px;
+        }
+        
+        .pinyin {
+            font-size: 14px;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+        
+        .hanzi {
+            width: 50px;
+            height: 50px;
+            border: 2px solid #e67e22;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #333;
+            background-color: white;
+        }
+        
+        #back {
+            background-color: #e74c3c;
+            margin-top: 30px;
+        }
+        
+        #back:hover {
+            background-color: #c0392b;
+        }
+        
+        /* Add loading styles */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .loading-text {
+            font-size: 1.3em;
+            color: #e67e22;
+            margin-bottom: 15px;
+        }
+
+        .loading-spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #e67e22;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <h1>美味小厨师</h1>
+    
+    <div class="container">
+        <div id="options-section">
+            <div class="section">
+                <h2>选择你喜欢的口味吧！</h2>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="spicy" name="flavor" value="辣" checked>
+                        <label for="spicy">辣🌶️</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="mild" name="flavor" value="清淡">
+                        <label for="mild">清淡🍃</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="sweet-sour" name="flavor" value="酸甜">
+                        <label for="sweet-sour">酸甜🍋</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="savory" name="flavor" value="咸香">
+                        <label for="savory">咸香🧂</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>今天想吃什么呢？</h2>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="seafood" name="ingredient" value="海鲜" checked>
+                        <label for="seafood">海鲜🐟</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="meat" name="ingredient" value="肉类">
+                        <label for="meat">肉类🍖</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="vegetable" name="ingredient" value="蔬菜">
+                        <label for="vegetable">蔬菜🥦</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="staple" name="ingredient" value="主食">
+                        <label for="staple">主食🍚</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>想要怎么烹饪呢？</h2>
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" id="stir-fry" name="cooking" value="炒" checked>
+                        <label for="stir-fry">炒🔥</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="steam" name="cooking" value="蒸">
+                        <label for="steam">蒸💨</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="bake" name="cooking" value="烤">
+                        <label for="bake">烤🔥</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="stew" name="cooking" value="炖">
+                        <label for="stew">炖🍲</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="generate">生成套餐</button>
+        </div>
+
+        <div class="result" id="result">
+            <div class="result-title">你的美味套餐</div>
+            <div id="dishes"></div>
+            <button id="back">重新选择</button>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="loading-text" id="loading-text"></div>
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+
+    <script>
+        // 菜品数据库
+        const dishesData = {
+            // 辣 + 海鲜
+            "辣-海鲜-炒": ["麻辣小龙虾", "辣炒蛤蜊"],
+            "辣-海鲜-蒸": ["剁椒蒸鱼头", "香辣蒸虾"],
+            "辣-海鲜-烤": ["香辣烤鱿鱼", "辣烤生蚝"],
+            "辣-海鲜-炖": ["麻辣水煮鱼", "辣味海鲜锅"],
+            
+            // 辣 + 肉类
+            "辣-肉类-炒": ["辣子鸡丁", "小炒黄牛肉"],
+            "辣-肉类-蒸": ["剁椒蒸排骨", "香辣蒸鸡"],
+            "辣-肉类-烤": ["麻辣烤肉", "烤辣鸡翅"],
+            "辣-肉类-炖": ["麻辣牛肉锅", "水煮牛肉"],
+            
+            // 辣 + 蔬菜
+            "辣-蔬菜-炒": ["麻辣炒豆芽", "辣炒空心菜"],
+            "辣-蔬菜-蒸": ["剁椒蒸茄子", "辣味蒸豆腐"],
+            "辣-蔬菜-烤": ["香辣烤茄子", "烤辣椒"],
+            "辣-蔬菜-炖": ["麻辣豆腐煲", "水煮菜心"],
+            
+            // 辣 + 主食
+            "辣-主食-炒": ["麻辣炒米粉", "辣味炒饭"],
+            "辣-主食-蒸": ["剁椒蒸米饭", "辣味蒸米糕"],
+            "辣-主食-烤": ["烤辣味馕", "香辣烤饼"],
+            "辣-主食-炖": ["麻辣米线", "辣味粥"],
+            
+            // 清淡 + 海鲜
+            "清淡-海鲜-炒": ["清炒虾仁", "葱爆螃蟹"],
+            "清淡-海鲜-蒸": ["清蒸鲈鱼", "蒜蓉粉丝蒸扇贝"],
+            "清淡-海鲜-烤": ["柠檬烤鱼", "香草烤虾"],
+            "清淡-海鲜-炖": ["海鲜豆腐汤", "鲜贝冬瓜汤"],
+            
+            // 清淡 + 肉类
+            "清淡-肉类-炒": ["青椒炒肉丝", "芹菜炒牛肉"],
+            "清淡-肉类-蒸": ["清蒸鸡", "蒸排骨"],
+            "清淡-肉类-烤": ["蜜汁叉烧", "香草烤鸡"],
+            "清淡-肉类-炖": ["清炖鸡汤", "萝卜炖牛腩"],
+            
+            // 清淡 + 蔬菜
+            "清淡-蔬菜-炒": ["清炒西兰花", "炒青菜"],
+            "清淡-蔬菜-蒸": ["蒸南瓜", "蒸花菜"],
+            "清淡-蔬菜-烤": ["烤蔬菜拼盘", "烤土豆"],
+            "清淡-蔬菜-炖": ["菜心豆腐汤", "冬瓜汤"],
+            
+            // 清淡 + 主食
+            "清淡-主食-炒": ["蛋炒饭", "清炒面"],
+            "清淡-主食-蒸": ["蒸米饭", "蒸馒头"],
+            "清淡-主食-烤": ["烤馒头片", "烤面包"],
+            "清淡-主食-炖": ["清粥", "银耳莲子羹"],
+            
+            // 酸甜 + 海鲜
+            "酸甜-海鲜-炒": ["糖醋鱼", "菠萝炒虾球"],
+            "酸甜-海鲜-蒸": ["柠檬蒸鱼", "酸甜蒸扇贝"],
+            "酸甜-海鲜-烤": ["酸甜烤鱼", "柠檬烤虾"],
+            "酸甜-海鲜-炖": ["番茄鱼汤", "酸甜海鲜羹"],
+            
+            // 酸甜 + 肉类
+            "酸甜-肉类-炒": ["糖醋里脊", "菠萝咕咾肉"],
+            "酸甜-肉类-蒸": ["酸甜蒸排骨", "梅菜蒸肉"],
+            "酸甜-肉类-烤": ["蜜汁烤肉", "酸甜烤鸡翅"],
+            "酸甜-肉类-炖": ["番茄炖牛腩", "菠萝咕咾肉"],
+            
+            // 酸甜 + 蔬菜
+            "酸甜-蔬菜-炒": ["糖醋藕片", "酸辣土豆丝"],
+            "酸甜-蔬菜-蒸": ["酸甜蒸茄子", "蒸山药"],
+            "酸甜-蔬菜-烤": ["烤甜椒", "烤菠萝"],
+            "酸甜-蔬菜-炖": ["番茄豆腐汤", "酸甜萝卜煲"],
+            
+            // 酸甜 + 主食
+            "酸甜-主食-炒": ["酸甜炒饭", "番茄炒饭"],
+            "酸甜-主食-蒸": ["红糖发糕", "蜜枣糕"],
+            "酸甜-主食-烤": ["菠萝面包", "甜味饼干"],
+            "酸甜-主食-炖": ["水果粥", "红豆沙"],
+            
+            // 咸香 + 海鲜
+            "咸香-海鲜-炒": ["葱爆海虾", "蒜香鱿鱼"],
+            "咸香-海鲜-蒸": ["蒜蓉粉丝蒸虾", "豉汁蒸鱼"],
+            "咸香-海鲜-烤": ["椒盐烤鱼", "香烤对虾"],
+            "咸香-海鲜-炖": ["海鲜豆腐煲", "香菇海鲜汤"],
+            
+            // 咸香 + 肉类
+            "咸香-肉类-炒": ["葱爆羊肉", "蒜苗炒肉"],
+            "咸香-肉类-蒸": ["豉汁蒸排骨", "咸鱼蒸肉饼"],
+            "咸香-肉类-烤": ["椒盐排骨", "烤羊肉串"],
+            "咸香-肉类-炖": ["红烧牛肉", "香菇炖鸡"],
+            
+            // 咸香 + 蔬菜
+            "咸香-蔬菜-炒": ["蒜蓉炒菜心", "香干炒青菜"],
+            "咸香-蔬菜-蒸": ["咸蛋蒸南瓜", "豆豉蒸茄子"],
+            "咸香-蔬菜-烤": ["烤蒜蓉茄子", "椒盐土豆"],
+            "咸香-蔬菜-炖": ["萝卜牛腩煲", "咸菜豆腐汤"],
+            
+            // 咸香 + 主食
+            "咸香-主食-炒": ["扬州炒饭", "咸肉菜饭"],
+            "咸香-主食-蒸": ["咸肉糯米饭", "腊味蒸饭"],
+            "咸香-主食-烤": ["肉松面包", "咸香烤饼"],
+            "咸香-主食-炖": ["皮蛋瘦肉粥", "咸菜肉丝面"]
+        };
+        
+        // 汉字拼音对照表
+        const pinyinTable = {
+            "麻": "má", "辣": "là", "小": "xiǎo", "龙": "lóng", "虾": "xiā",
+            "炒": "chǎo", "蛤": "há", "蜊": "lí", "剁": "duò", "椒": "jiāo",
+            "蒸": "zhēng", "鱼": "yú", "头": "tóu", "香": "xiāng", "鱿": "yóu",
+            "烤": "kǎo", "生": "shēng", "蚝": "háo", "水": "shuǐ", "煮": "zhǔ",
+            "味": "wèi", "锅": "guō", "子": "zǐ", "鸡": "jī", "丁": "dīng",
+            "黄": "huáng", "牛": "niú", "肉": "ròu", "排": "pái", "骨": "gǔ",
+            "翅": "chì", "豆": "dòu", "芽": "yá", "空": "kōng", "心": "xīn",
+            "菜": "cài", "茄": "qié", "腐": "fǔ", "米": "mǐ", "粉": "fěn",
+            "饭": "fàn", "糕": "gāo", "馕": "náng", "饼": "bǐng", "线": "xiàn",
+            "粥": "zhōu", "清": "qīng", "葱": "cōng", "爆": "bào", "蟹": "xiè",
+            "蒜": "suàn", "蓉": "róng", "丝": "sī", "扇": "shàn", "贝": "bèi",
+            "柠": "níng", "檬": "méng", "草": "cǎo", "豆": "dòu", "腐": "fǔ",
+            "冬": "dōng", "瓜": "guā", "汤": "tāng", "青": "qīng", "芹": "qín",
+            "西": "xī", "兰": "lán", "花": "huā", "南": "nán", "盘": "pán",
+            "土": "tǔ", "豆": "dòu", "面": "miàn", "馒": "mán", "头": "tóu",
+            "片": "piàn", "包": "bāo", "银": "yín", "耳": "ěr", "莲": "lián",
+            "糖": "táng", "醋": "cù", "菠": "bō", "萝": "luó", "球": "qiú",
+            "甜": "tián", "番": "fān", "茄": "qié", "羹": "gēng", "脊": "jǐ",
+            "咕": "gū", "咾": "lāo", "梅": "méi", "蜜": "mì", "汁": "zhī", 
+            "藕": "ǒu", "辣": "là", "丝": "sī", "山": "shān", "药": "yào",
+            "椒": "jiāo", "果": "guǒ", "红": "hóng", "沙": "shā", "盐": "yán",
+            "对": "duì", "苗": "miáo", "豉": "chǐ", "鱼": "yú", "饼": "bǐng",
+            "串": "chuàn", "烧": "shāo", "干": "gān", "蛋": "dàn", "扬": "yáng",
+            "州": "zhōu", "腊": "là", "松": "sōng", "皮": "pí", "瘦": "shòu",
+            "海": "hǎi", "鲜": "xiān", "仁": "rén", "叉": "chā",
+            "卜": "bo", "腩": "nǎn", "拼": "pīn", "煲": "bāo",
+            "发": "fā", "枣": "zǎo", "菇": "gū", "羊": "yáng",
+            "糯": "nuò", "螃": "páng", "咸": "xián", "酸": "suān",
+            "炖": "dùn"
+        };
+        
+        const loadingMessages = [
+            "小厨师正在热锅~🔥",
+            "正在挑选最新鲜的食材...🥬",
+            "厨师帽戴好了！👨‍🍳",
+            "让我想想做什么好吃的~🤔",
+            "小火慢炖中...🍲",
+            "马上就好啦！⏳",
+            "正在撒点神奇的调味料✨",
+            "厨房里飘来香味了~👃",
+            "快要完成啦！🎉"
+        ];
+
+        function getRandomLoadingMessage() {
+            return loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
+        }
+
+        function generateDishes() {
+            document.getElementById('options-section').style.display = 'none';
+            document.getElementById('loading').style.display = 'block';
+            document.getElementById('loading-text').textContent = getRandomLoadingMessage();
+
+            setTimeout(() => {
+                document.getElementById('loading').style.display = 'none';
+                
+                // Original generate dishes code
+                const flavor = document.querySelector('input[name="flavor"]:checked').value;
+                const ingredient = document.querySelector('input[name="ingredient"]:checked').value;
+                const cooking = document.querySelector('input[name="cooking"]:checked').value;
+                
+                const key = `${flavor}-${ingredient}-${cooking}`;
+                const selectedDishes = dishesData[key] || ["特色家常菜"];
+                
+                const dishesContainer = document.getElementById('dishes');
+                dishesContainer.innerHTML = '';
+                
+                selectedDishes.forEach((dish, index) => {
+                    const dishElement = document.createElement('div');
+                    dishElement.className = 'pinyin-blocks';
+                    
+                    // 为每个字生成带拼音的方块
+                    for (let i = 0; i < dish.length; i++) {
+                        const char = dish[i];
+                        const pinyin = pinyinTable[char] || '';
+                        
+                        const charBlock = document.createElement('div');
+                        charBlock.className = 'char-block';
+                        
+                        const pinyinSpan = document.createElement('span');
+                        pinyinSpan.className = 'pinyin';
+                        pinyinSpan.textContent = pinyin;
+                        
+                        const hanziDiv = document.createElement('div');
+                        hanziDiv.className = 'hanzi';
+                        hanziDiv.textContent = char;
+                        
+                        charBlock.appendChild(pinyinSpan);
+                        charBlock.appendChild(hanziDiv);
+                        dishElement.appendChild(charBlock);
+                    }
+                    
+                    dishesContainer.appendChild(dishElement);
+                    
+                    // Add divider if not the last dish
+                    if (index < selectedDishes.length - 1) {
+                        const divider = document.createElement('div');
+                        divider.className = 'dish-divider';
+                        dishesContainer.appendChild(divider);
+                    }
+                });
+                
+                document.getElementById('result').style.display = 'block';
+            }, 2000);
+        }
+        
+        function goBack() {
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('options-section').style.display = 'block';
+        }
+        
+        // Event listeners
+        document.getElementById('generate').addEventListener('click', generateDishes);
+        document.getElementById('back').addEventListener('click', goBack);
+    </script>
+</body>
+</html>
